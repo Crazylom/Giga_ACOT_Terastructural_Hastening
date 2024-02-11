@@ -1,0 +1,199 @@
+tech_dm_giga_ass = {
+	cost = @acot_tier6cost3
+	area = physics
+	tier = 6
+	category = { materials }
+
+	prerequisites = { 
+		"giga_tech_amb_supertensiles"
+		"tech_dark_matter_power_core_dm"
+	}
+
+	weight = 10000
+
+	potential = { 
+		NOT = { 
+			is_fallen_empire = yes
+			has_global_flag = acot_building_forbidden
+			has_global_flag = acot_delta_forbidden
+		}
+  		has_global_flag = acot_activated
+		has_technology = tech_dark_matter_power_core_dm
+	}
+
+	modifier = {
+		country_base_giga_sr_amb_megaconstruction_produces_add = 10
+		megastructure_build_speed_mult = 0.2
+		country_megastructure_build_cap_add = 1
+	}
+
+	weight_modifier = {
+		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+	}
+	ai_weight = {
+		factor = 100
+		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+		modifier = { 
+			factor = 100 
+		}
+	}
+}
+
+tech_ae_tera_hampter = {
+	cost = @acot_tier7cost3
+	area = physics
+	tier = 6
+	category = { materials }
+
+	prerequisites = { 
+		"tech_dm_giga_ass"
+		"tech_dark_matter_power_core_ae"
+	}
+
+	weight = 10000
+
+	potential = { 
+		NOT = { 
+			is_fallen_empire = yes
+			has_global_flag = acot_building_forbidden	
+		}	
+		has_global_flag = acot_activated
+		has_technology = tech_dark_matter_power_core_ae
+	}
+
+	modifier = {
+		country_base_giga_sr_amb_megaconstruction_produces_add = 20
+		megastructure_build_speed_mult = 0.4
+		country_megastructure_build_cap_add = 2
+	}
+
+	weight_modifier = {
+		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+	}
+
+	ai_weight = {
+		factor = 100
+		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+		modifier = { 
+			factor = 100 
+		}
+	}
+}
+
+tech_phanon_meatballs = {
+	cost = @acot_tier10cost3
+	area = physics
+	tier = 6
+	category = { materials }
+
+	prerequisites = {
+		"tech_ae_tera_hampter"
+		"tech_civil_phanon_application"
+	}
+
+	weight = 10000
+	
+	potential = { 
+		has_acot = yes
+		has_global_flag = has_aot_mod
+		has_global_flag = @giga_amb_flag
+
+		NOT = { has_global_flag = aot_phanon_content_OFF }
+		has_technology = tech_civil_phanon_application
+	}
+	modifier = {
+		country_base_giga_sr_amb_megaconstruction_produces_add = 60
+		megastructure_build_speed_mult = 1
+	}
+
+	weight_modifier = {
+		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+	}
+
+	ai_weight = {
+		factor = 100
+		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+		modifier = { 
+			factor = 100 
+		}
+	}
+}
+
+tech_stellarite_big_cheez = {
+	cost = @acot_tier8cost3
+	area = physics
+	tier = 6
+	category = { materials }
+
+	prerequisites = { 
+		"tech_phanon_meatballs"
+		"tech_dark_matter_power_core_se"
+	}
+
+	weight = 10000
+
+	potential = { 
+		has_acot = yes
+		has_global_flag = has_aot_mod
+		has_global_flag = @giga_amb_flag
+
+		NOT = { has_global_flag = acot_building_forbidden }
+		has_technology = tech_dark_matter_power_core_se
+	}
+
+	modifier = {
+		country_base_giga_sr_amb_megaconstruction_produces_add = 200
+		megastructure_build_speed_mult = 2
+	}
+
+	weight_modifier = {
+		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+	}
+	ai_weight = {
+		factor = 100
+		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+		modifier = { 
+			factor = 100 
+		}
+	}
+}
+
+#tech_runic_pokemon = {
+#	cost = 6400000
+#	area = physics
+#	tier = 6
+#	category = { materials }
+#
+#	weight = 10000
+#
+#	potential = {
+#		NOT = { has_global_flag = acot_building_forbidden 
+#			is_fallen_empire = yes
+#		}
+#		has_technology = tech_dark_matter_power_core_theta
+#
+#	}
+#
+#	modifier = {
+#		country_base_giga_sr_amb_megaconstruction_produces_add = 1024
+#		megastructure_build_speed_mult = 5
+#		country_megastructure_build_cap_add = 5
+#	}
+#
+#	weight_modifier = {
+#		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+#	}
+#
+#	ai_weight = {
+#		factor = 100
+#		modifier = { factor = value:tech_weight_likelihood research_leader = { area = physics has_trait = leader_trait_expertise_materials } }
+#		modifier = { 
+#			factor = 100 
+#		}
+#	}	
+#	prerequisites = { 
+#		tech_phanon_spaghett_stretcher
+#		tech_dark_matter_power_core_theta
+#	}
+#	
+#}

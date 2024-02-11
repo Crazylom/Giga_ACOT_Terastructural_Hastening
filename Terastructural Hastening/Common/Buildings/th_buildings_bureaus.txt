@@ -1,0 +1,234 @@
+building_dm_efficiency_office = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_dm_supertensile
+	category = manufacturing
+	potential = {
+		NOT = {
+			is_fallen_empire = yes
+			has_global_flag = acot_building_forbidden
+		}
+	}
+
+	prerequisites = {
+		"tech_dm_giga_ass"
+	}
+
+	allow = {
+		has_enigmatic_capital = yes
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 10000
+		megastructure_build_speed_mult = 0.1
+		planet_decision_enact_speed_mult = 0.05
+		planet_building_build_speed_mult = 0.05
+		starbase_building_build_speed_mult = 0.05
+		starbase_module_build_speed_mult = 0.05
+		starbase_upgrade_speed_mult = 0.05
+		planet_clear_blocker_speed_mult = 0.05
+		}
+
+	planet_modifier = {
+	megastructure_produces_mult = 0.1
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			alloys = 250
+			sr_dark_matter = 100
+			acot_sr_dark_energy = 100
+		}
+		produces = {
+		}
+		upkeep = {
+			alloys = 20
+			unity = 50
+			sr_dark_matter = 2
+			acot_sr_dark_energy = 2
+		}
+	}
+	upgrades = {
+		building_ae_bureau_of_fastening
+	}
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+building_ae_bureau_of_fastening = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_ae_supertensile
+	category = manufacturing
+	potential = {
+		NOT = {
+			is_fallen_empire = yes
+			has_global_flag = acot_building_forbidden
+		}
+	}
+
+	prerequisites = {
+		"tech_ae_tera_hampter"
+	}
+
+	allow = {
+		has_ascended_capital = yes
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 20000
+		megastructure_build_speed_mult = 0.25
+		planet_decision_enact_speed_mult = 0.1
+		planet_building_build_speed_mult = 0.1
+		starbase_building_build_speed_mult = 0.1
+		starbase_module_build_speed_mult = 0.1
+		starbase_upgrade_speed_mult = 0.1
+		planet_clear_blocker_speed_mult = 0.1
+		}
+
+	planet_modifier = {
+	megastructure_produces_mult = 0.25
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			alloys = 250
+			sr_dark_matter = 100
+			acot_sr_dark_energy = 100
+		}
+		produces = {
+		}
+		upkeep = {
+			alloys = 20
+			unity = 50
+			sr_dark_matter = 2
+			acot_sr_dark_energy = 2
+		}
+	}
+	upgrades = {
+		building_phanon_pasta_spreader
+	}
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+building_phanon_pasta_spreader = {
+	base_buildtime = 480
+	can_build = no
+	can_demolish = yes
+	icon = building_phanon_supertensile
+	category = manufacturing
+	potential = {
+		NOR = {
+			has_global_flag = aot_phanon_content_OFF
+			is_fallen_empire = yes
+		}
+	}
+
+	prerequisites = {
+		tech_phanon_meatballs
+	}
+
+	allow = {
+		has_phanon_capital = yes
+	}
+		
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 60000
+		megastructure_build_speed_mult = 0.75
+		planet_decision_enact_speed_mult = 0.30
+		planet_building_build_speed_mult = 0.30
+		starbase_building_build_speed_mult = 0.30
+		starbase_module_build_speed_mult = 0.30
+		starbase_upgrade_speed_mult = 0.30
+		planet_clear_blocker_speed_mult = 0.30
+	}
+
+	planet_modifier = {
+		megastructure_produces_mult = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 1000
+			minerals = 5000
+			alloys = 500
+			unity = 400
+			aot_sr_runic_power = 10000
+		}
+		produces = {
+		}
+
+		upkeep = {
+			aot_sr_runic_power = 100
+		}
+	}
+	upgrades = {
+		building_stellarite_cheesering_palace
+	}
+}
+
+building_stellarite_cheesering_palace = {
+	base_buildtime = 480
+	can_build = no
+	can_demolish = yes
+	icon = building_stellarite_supertensile
+	category = manufacturing
+	potential = {
+		NOT = {
+			is_fallen_empire = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_stellarite_big_cheez"
+	}
+
+
+	allow = {
+		has_stellarite_capital = yes
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 200000
+		megastructure_build_speed_mult = 2
+		planet_decision_enact_speed_mult = 1
+		planet_building_build_speed_mult = 1
+		starbase_building_build_speed_mult = 1
+		starbase_module_build_speed_mult = 1
+		starbase_upgrade_speed_mult = 1
+		planet_clear_blocker_speed_mult = 1
+	}
+
+	planet_modifier = {
+		megastructure_produces_mult = 2.5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 10000
+			alloys = 5000
+			acot_sr_stellarite = 1000
+		}
+		produces = {
+		}
+		upkeep = {
+			acot_sr_stellarite = 10
+		}
+	}
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 10000
+	}
+}

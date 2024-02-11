@@ -1,0 +1,514 @@
+building_dm_gigastructural_assembler = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_dm_gigastructural_assembler
+	category = manufacturing
+	potential = {
+		NOT = {
+			is_fallen_empire = yes
+			has_global_flag = acot_building_forbidden
+		}
+	}
+
+	prerequisites = {
+		"tech_dm_giga_ass"
+	}
+
+	allow = {
+		has_enigmatic_capital = yes
+	}
+
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_gestalt = no }
+        }
+        modifier = {
+            job_dm_gigaseer_add = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        modifier = {
+            job_dm_gigadrone_add = 2
+        }
+    }
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 5000
+		megastructure_build_speed_mult = 0.02
+		}
+
+	planet_modifier = {
+		megastructure_produces_mult = 0.02
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			alloys = 250
+			sr_dark_matter = 100
+			acot_sr_dark_energy = 100
+		}
+		produces = {
+			giga_sr_amb_megaconstruction = 5
+		}
+		upkeep = {
+			alloys = 20
+			unity = 50
+			sr_dark_matter = 2
+			acot_sr_dark_energy = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = pm_planet_fe_buildings_boost
+				}
+			}
+			giga_sr_amb_megaconstruction = 2
+		}
+	}
+	upgrades = {
+		building_ae_terastructural_hastener
+	}
+	ai_weight = {
+		weight = 10000
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		text = job_dm_gigaseer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_dm_gigadrone_effect_desc
+	}
+}
+
+building_ae_terastructural_hastener = {
+	base_buildtime = 480
+	can_build = no
+	can_demolish = yes
+	icon = building_ae_terastructural_hastener
+	category = manufacturing
+	potential = {
+		NOT = {
+			is_fallen_empire = yes
+			has_global_flag = acot_building_forbidden
+		}
+	}
+
+	prerequisites = {
+		tech_ae_tera_hampter
+	}
+
+	allow = {
+		has_ascended_capital = yes
+	}
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_gestalt = no }
+        }
+        modifier = {
+            job_ae_teraseer_add = 4
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        modifier = {
+            job_ae_teradrone_add = 4
+        }
+    }
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 10000
+		megastructure_build_speed_mult = 0.05
+		}
+
+	planet_modifier = {
+		megastructure_produces_mult = 0.05
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+			alloys = 1000
+			sr_dark_matter = 500
+			acot_sr_dark_energy = 500
+		}
+		produces = {
+			giga_sr_amb_megaconstruction = 10
+		}
+		upkeep = {
+			alloys = 20
+			unity = 50
+			acot_sr_dark_energy = 10
+			sr_dark_matter = 10
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = pm_planet_fe_buildings_boost
+				}
+			}
+			giga_sr_amb_megaconstruction = 5
+		}
+	}
+	upgrades = {
+		building_phanon_spaghett_extracting_facility
+	}
+	ai_weight = {
+		weight = 10000
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_ae_teraseer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_ae_teradrone_effect_desc
+	}
+}
+
+building_phanon_spaghett_extracting_facility = {
+	base_buildtime = 480
+	can_build = no
+	can_demolish = yes
+	icon = building_phanon_spaghett_extracting_facility
+	category = manufacturing
+	potential = {
+		NOR = {
+			has_global_flag = aot_phanon_content_OFF
+			is_fallen_empire = yes
+		}
+	}
+
+	prerequisites = {
+		tech_phanon_meatballs
+	}
+
+	allow = {
+		has_phanon_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_phanon_mario_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_phanon_luigi_add = 2
+		}
+	}
+		
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 30000
+		megastructure_build_speed_mult = 0.1
+	}
+
+	planet_modifier = {
+		megastructure_produces_mult = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 1000
+			minerals = 5000
+			alloys = 500
+			unity = 400
+			aot_sr_runic_power = 10000
+		}
+		produces = {
+			giga_sr_amb_megaconstruction = 40
+		}
+
+		upkeep = {
+			aot_sr_runic_power = 20
+		}
+	}
+	upgrades = {
+		building_stellarite_cheesering_isle
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_phanon_mario_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_phanon_luigi_effect_desc
+	}
+}
+
+building_stellarite_cheesering_isle = {
+	base_buildtime = 480
+	can_build = no
+	can_demolish = yes
+	icon = building_stellarite_cheesering_isle
+	category = manufacturing
+	potential = {
+		NOT = {
+			is_fallen_empire = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_stellarite_big_cheez"
+	}
+
+
+	allow = {
+		has_stellarite_capital = yes
+	}
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_gestalt = no }
+        }
+        modifier = {
+            job_stellarite_pizzaboy_add = 4
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        modifier = {
+            job_stellarite_pizzahost_add = 4
+        }
+    }
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 100000
+		megastructure_build_speed_mult = 0.25
+	}
+
+	planet_modifier = {
+		megastructure_produces_mult = 0.25
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 10000
+			alloys = 5000
+			acot_sr_stellarite = 1000
+		}
+		produces = {
+			giga_sr_amb_megaconstruction = 100
+		}
+		upkeep = {
+			acot_sr_stellarite = 10
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = pm_planet_stellarite_buildings_boost
+				}
+			}
+			giga_sr_amb_megaconstruction = 50
+		}
+	}
+
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 10000
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_stelarite_pizzaboy_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_stelarite_pizzahost_effect_desc
+	}
+}
+
+#Removed due to assets used not being released yet
+
+#building_runic_champ_house = {
+#	base_buildtime = 480
+#	can_build = no
+#	can_demolish = yes
+#	icon = building_theta_sky_dome
+#	category = manufacturing
+#	potential = {
+#		NOT = {
+#			is_fallen_empire = yes
+#		}
+#	}
+#	prerequisites = {
+#		"tech_runic_pokemon"
+#	}
+#
+#	allow = {
+#		has_phanon_capital = yes
+#	}
+#
+#	destroy_trigger = {
+#		OR = {
+#			has_modifier = resort_colony
+#			has_modifier = slave_colony
+#		}
+#	}
+#
+#	triggered_planet_modifier = {
+#		potential = {
+#			exists = owner
+#			owner = { is_gestalt = no }
+#		}
+#		modifier = {
+#			job_runic_trainer_add = 2
+#		}
+#	}
+#
+#	triggered_planet_modifier = {
+#		potential = {
+#			exists = owner
+#			owner = { is_gestalt = yes }
+#		}
+#		modifier = {
+#			job_runic_trainer_add = 2
+#		}
+#	}
+#
+#	resources = {
+#		category = planet_buildings
+#		cost = {
+#			energy = 10000
+#			minerals = 5000
+#			alloys = 2000
+#			unity = 1000
+#			sm_sr_perfect_runic_energy = 100
+#		}
+#		produces = {
+#			giga_sr_amb_megaconstruction = 512
+#		}
+#		
+#		country_modifier = {
+#			country_resource_max_giga_sr_amb_megaconstruction_add = 50000
+#		}
+#
+#		upkeep = {
+#			sm_sr_perfect_runic_energy = 10
+#
+#		}
+#	}
+#
+#	upgrades = {
+#	}
+#
+#	ai_weight = {
+#		weight = 10
+#		modifier = {
+#			factor = 5
+#			owner = {
+#				has_monthly_income = {
+#					resource = minerals
+#					value < 10
+#				}
+#			}
+#		}
+#	}
+#
+#	ai_resource_production = {
+#		alloys = 100
+#		unity = 20
+#		giga_tech_amb_supertensiles = 500
+#		trigger = {
+#			always = yes
+#		}
+#	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				is_gestalt = no
+#				is_fallen_empire_spiritualist = no
+#			}
+#		}
+#		text = #job_runic_trainer_effect_desc
+#	}
+#
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				is_gestalt = yes
+#			}
+#		}
+#		text = #job_runic_trainer_effect_desc
+#	}
+#}
