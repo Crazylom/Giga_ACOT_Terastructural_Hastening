@@ -1,0 +1,45 @@
+# Bureaus  
+# Delta
+inline_script = {
+	script = "buildings/building_giga_megaworkshop_acot"
+	tier = "delta"
+	boolean = "yes"
+	allow = "has_enigmatic_capital = yes"
+	upgrade = "building_giga_megaworkshop_acot_alpha"
+	resource1 = "sr_dark_matter"
+	resource2 = "acot_sr_dark_energy"
+	upkeep = "unity"
+}
+# Alpha
+inline_script = {
+	script = "buildings/building_giga_megaworkshop_acot"
+	tier = "alpha"
+	boolean = "yes"
+	allow = "has_ascended_capital = yes"
+	upgrade = "building_giga_megaworkshop_acot_phanon"
+	resource1 = "sr_dark_matter"
+	resource2 = "acot_sr_dark_energy"
+	upkeep = "unity"
+}
+# Phanon
+inline_script = {
+	script = "buildings/building_giga_megaworkshop_acot"
+	tier = "phanon"
+	boolean = "yes"
+	allow = "has_phanon_capital = yes"
+	upgrade = "building_giga_megaworkshop_acot_sigma"
+	resource1 = "aot_sr_runic_power"
+	resource2 = "energy"
+	upkeep = "unity"
+}
+# Sigma
+inline_script = {
+	script = "buildings/building_giga_megaworkshop_acot"
+	tier = "sigma"
+	boolean = "yes"
+	allow = "has_stellarite_capital = yes"
+	upgrade = ""
+	resource1 = "acot_sr_stellarite"
+	resource2 = "energy"
+	upkeep = "unity"
+}

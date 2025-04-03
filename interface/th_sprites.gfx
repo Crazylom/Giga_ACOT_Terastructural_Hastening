@@ -1,0 +1,7 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_evt_th_giga_wallace"
+		texturefile = "gfx/event_pictures/th_giga_wallace.dds"
+		alwaystransparent = yes	
+	}
+}

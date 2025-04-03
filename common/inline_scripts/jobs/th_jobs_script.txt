@@ -1,0 +1,164 @@
+giga_megaengineering_overseer_acot_$tier$ = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_giga_megaworkshop_hub_acot_$tier$
+	clothes_texture_index = 1
+	icon = "$icon_big$"
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = @th_overseer_$tier$_output
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+		upkeep = {
+			consumer_goods = @th_overseer_$tier$_extra
+			alloys = @th_overseer_$tier$_alloys_upkeep
+			unity = @th_overseer_$tier$_unity_upkeep
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+		upkeep = {	
+			$resource1$ = @th_overseer_$tier$_resource1_upkeep
+			$resource2$ = @th_overseer_$tier$_resource2_upkeep
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+
+		produces = {
+			trigger = {
+				owner = { has_edict = giga_amb_sentient_metal_supertensiles }
+			}
+			giga_sr_amb_megaconstruction = @th_overseer_$tier$_output_edict
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+		upkeep = {
+			trigger = {
+				owner = { has_edict = giga_amb_sentient_metal_supertensiles }
+			}
+			alloys = @th_overseer_alloys_edict
+			ehof_sr_sentient_metal = @th_overseer_$tier$_sentient_metal_edict
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+	}
+
+	weight = {
+		weight = value:giga_ruler_weight|JOB|giga_megaengineering_overseer_acot_$tier$|RESOURCE|giga_sr_amb_megaconstruction|
+	}
+}
+
+# GESTALTS
+
+giga_megaengineering_overseer_drone_acot_$tier$ = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_giga_megaworkshop_hub_acot_$tier$
+	icon = "$icon_big_drone$"
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = @th_overseer_$tier$_output
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+		upkeep = {
+			alloys = @th_overseer_$tier$_alloys_upkeep
+			unity = @th_overseer_$tier$_unity_upkeep
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+		upkeep = {	
+			$resource1$ = @th_overseer_$tier$_resource1_upkeep
+			$resource2$ = @th_overseer_$tier$_resource2_upkeep
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_machine_empire = yes
+				}
+			}
+			energy = @th_overseer_$tier$_gestalt_extra
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_hive_empire = yes
+				}
+				species = {
+					is_lithoid = no
+				}
+			}
+			food = @th_overseer_$tier$_gestalt_extra
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_hive_empire = yes
+				}
+				species = {
+					is_lithoid = yes
+				}
+			}
+			minerals = @th_overseer_$tier$_gestalt_extra
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+
+		produces = {
+			trigger = {
+				owner = { has_edict = giga_amb_sentient_metal_supertensiles }
+			}
+			giga_sr_amb_megaconstruction = @th_overseer_$tier$_output_edict
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+		upkeep = {
+			trigger = {
+				owner = { has_edict = giga_amb_sentient_metal_supertensiles }
+			}
+			alloys = @th_overseer_alloys_edict
+			ehof_sr_sentient_metal = @th_overseer_$tier$_sentient_metal_edict
+
+			multiplier = planet.value:giga_job_scaling_plus_base
+		}
+	}
+
+	weight = {
+		weight = value:giga_complex_drone_weight|JOB|giga_megaengineering_overseer_drone_acot_$tier$|RESOURCE|giga_sr_amb_megaconstruction|
+	}
+}

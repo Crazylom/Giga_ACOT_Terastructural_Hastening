@@ -1,0 +1,116 @@
+##########################################################################################################
+# delta
+# Default: 1.5x output, 1.75x upkeep
+
+# building costs
+@th_bureau_time_delta = 480
+@th_bureau_cost_minerals_delta = 2000
+@th_bureau_cost_resource1_delta = 200
+@th_bureau_cost_resource2_delta = 100
+@th_bureau_upkeep1_delta = 5
+@th_bureau_upkeep2_delta = 10
+@th_bureau_upkeep3_delta = 10
+
+# storage (scaled)
+@th_bureau_storage_delta = 6000
+
+# modifiers (scaled)
+@th_mega_build_speed_delta = 0.2
+@th_mega_produces_delta = 0.04
+@th_mega_cost_delta = -0.02
+@th_decision_speed_delta = 0.10
+@th_planet_building_speed_delta = 0.10
+@th_starbase_building_speed_delta = 0.10
+@th_starbase_module_speed_delta = 0.10
+@th_starbase_upgrade_speed_delta = 0.10
+@th_planet_blocker_speed_delta = 0.10
+@th_colony_speed_delta = 0.10
+@th_terraform_speed_delta = 0.10
+@th_mega_build_add_delta = 0.10
+##########################################################################################################
+# alpha
+# Default: 2x output, 4x upkeep
+
+# building costs
+@th_bureau_time_alpha = 600
+@th_bureau_cost_minerals_alpha = 4000
+@th_bureau_cost_resource1_alpha = 500
+@th_bureau_cost_resource2_alpha = 500
+@th_bureau_upkeep1_alpha = 20
+@th_bureau_upkeep2_alpha = 20
+@th_bureau_upkeep3_alpha = 20
+
+# storage (scaled)
+@th_bureau_storage_alpha = 12000
+
+# modifiers (scaled)
+@th_mega_build_speed_alpha = 0.4
+@th_mega_produces_alpha = 0.1
+@th_mega_cost_alpha = -0.05
+@th_decision_speed_alpha = 0.20
+@th_planet_building_speed_alpha = 0.20
+@th_starbase_building_speed_alpha = 0.20
+@th_starbase_module_speed_alpha = 0.20
+@th_starbase_upgrade_speed_alpha = 0.20
+@th_planet_blocker_speed_alpha = 0.20
+@th_colony_speed_alpha = 0.20
+@th_terraform_speed_alpha = 0.20
+@th_mega_build_add_alpha = 0.25
+##########################################################################################################
+# phanon
+# Default: 3x output, 7.5x upkeep
+
+# building costs
+@th_bureau_time_phanon = 780
+@th_bureau_cost_minerals_phanon = 8000
+@th_bureau_cost_resource1_phanon = 1000
+@th_bureau_cost_resource2_phanon = 8000
+@th_bureau_upkeep1_phanon = 100
+@th_bureau_upkeep2_phanon = 200
+@th_bureau_upkeep3_phanon = 200
+
+# storage (scaled to production)
+@th_bureau_storage_phanon = 30000
+
+# modifiers (scaled)
+@th_mega_build_speed_phanon = 1
+@th_mega_produces_phanon = 0.2
+@th_mega_cost_phanon = -0.1
+@th_decision_speed_phanon = 0.5
+@th_planet_building_speed_phanon = 0.50
+@th_starbase_building_speed_phanon = 0.50
+@th_starbase_module_speed_phanon = 0.50
+@th_starbase_upgrade_speed_phanon = 0.50
+@th_planet_blocker_speed_phanon = 0.50
+@th_colony_speed_phanon = 0.50
+@th_terraform_speed_phanon = 0.50
+@th_mega_build_add_phanon = 0.5
+##########################################################################################################
+# sigma
+# Default: 5x output, 15x upkeep
+
+# building costs
+@th_bureau_time_sigma = 1080
+@th_bureau_cost_minerals_sigma = 12000
+@th_bureau_cost_resource1_sigma = 4000
+@th_bureau_cost_resource2_sigma = 16000
+@th_bureau_upkeep1_sigma = 100
+@th_bureau_upkeep2_sigma = 400
+@th_bureau_upkeep3_sigma = 500
+
+# storage (scaled to production)
+@th_bureau_storage_sigma = 150000
+
+# modifiers (scaled)
+@th_mega_build_speed_sigma = 2
+@th_mega_produces_sigma = 0.4
+@th_mega_cost_sigma = -0.2
+@th_decision_speed_sigma = 1
+@th_planet_building_speed_sigma = 1
+@th_starbase_building_speed_sigma = 1
+@th_starbase_module_speed_sigma = 1
+@th_starbase_upgrade_speed_sigma = 1
+@th_planet_blocker_speed_sigma = 1
+@th_colony_speed_alpha = 1
+@th_terraform_speed_alpha = 1
+@th_mega_build_add_alpha = 1

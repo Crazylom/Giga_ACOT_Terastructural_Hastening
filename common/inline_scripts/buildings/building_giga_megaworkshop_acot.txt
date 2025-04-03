@@ -1,0 +1,68 @@
+building_giga_megaworkshop_acot_$tier$ = {
+	base_buildtime = @th_bureau_time_$tier$
+	category = manufacturing
+	icon = "acot_compat/building_giga_megaworkshop_acot_$tier$"
+
+	can_build = $boolean$ # upgrade
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 		@th_bureau_cost_minerals_$tier$
+			$resource1$ = 	@th_bureau_cost_resource1_$tier$
+			$resource2$ = 	@th_bureau_cost_resource2_$tier$
+		}
+		upkeep = {
+			$resource1$ = 	@th_bureau_upkeep1_$tier$
+			$resource2$ = 	@th_bureau_upkeep2_$tier$
+			$upkeep$ = 		@th_bureau_upkeep3_$tier$
+		}
+	}
+
+	prerequisites = {
+		giga_tech_amb_supertensiles_acot_$tier$
+	}
+
+	potential = {
+		nor = { 
+			has_global_flag = acot_building_forbidden
+			has_modifier = resort_colony
+			has_modifier = slave_colony 
+			has_modifier = crucible_colony
+		}
+		has_global_flag = @giga_amb_flag
+	}
+
+	allow = {
+		$allow$
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			NOT = { has_global_flag = @giga_amb_flag }
+		}
+	}
+
+	upgrades = {
+		$upgrade$
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = @th_bureau_storage_$tier$
+		megastructure_build_speed_mult = @th_mega_build_speed_$tier$
+		megastructures_produces_mult = @th_mega_produces_$tier$
+		planet_decision_enact_speed_mult = @th_decision_speed_$tier$
+		planet_building_build_speed_mult = @th_planet_building_speed_$tier$
+		starbase_building_build_speed_mult = @th_starbase_building_speed_$tier$
+		starbase_module_build_speed_mult = @th_starbase_module_speed_$tier$
+		starbase_upgrade_speed_mult = @th_starbase_upgrade_speed_$tier$
+		planet_clear_blocker_speed_mult = @th_planet_blocker_speed_$tier$
+		planet_colony_development_speed_mult = @th_colony_speed_$tier$
+		terraform_speed_mult = @th_terraform_speed_$tier$
+		megastructures_cost_mult = @th_mega_cost_$tier$
+		megastructure_build_speed_add = @th_mega_build_add_$tier$
+	}
+}

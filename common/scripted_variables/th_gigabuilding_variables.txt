@@ -1,0 +1,51 @@
+##########################################################################################################
+# delta
+# Default: 1.5x output, 1.75x upkeep
+
+# building costs
+@th_gigabuilding_time_delta = 720
+@th_gigabuilding_cost_minerals_delta = 4000
+@th_gigabuilding_cost_resource1_delta = 200
+@th_gigabuilding_cost_resource2_delta = 100
+@th_gigabuilding_upkeep1_delta = 10
+@th_gigabuilding_upkeep2_delta = 5
+@th_gigabuilding_storage_delta = 1000
+
+##########################################################################################################
+# alpha
+# Default: 2x output, 4x upkeep
+
+# building costs
+@th_gigabuilding_time_alpha = 800
+@th_gigabuilding_cost_minerals_alpha = 8000
+@th_gigabuilding_cost_resource1_alpha = 500
+@th_gigabuilding_cost_resource2_alpha = 500
+@th_gigabuilding_upkeep1_delta = 20
+@th_gigabuilding_upkeep2_delta = 20
+@th_gigabuilding_storage_delta = 2000
+
+##########################################################################################################
+# phanon
+# Default: 3x output, 7.5x upkeep
+
+# building costs
+@th_gigabuilding_time_phanon = 1080
+@th_gigabuilding_cost_minerals_phanon = 16000
+@th_gigabuilding_cost_resource1_phanon = 1000
+@th_gigabuilding_cost_resource2_phanon = 8000
+@th_gigabuilding_upkeep1_delta = 40
+@th_gigabuilding_upkeep2_delta = 160
+@th_gigabuilding_storage_delta = 4000
+
+##########################################################################################################
+# sigma
+# Default: 5x output, 15x upkeep
+
+# building costs
+@th_gigabuilding_time_sigma = 1600
+@th_gigabuilding_cost_minerals_sigma = 32000
+@th_gigabuilding_cost_resource1_sigma = 4000
+@th_gigabuilding_cost_resource2_sigma = 16000
+@th_gigabuilding_upkeep1_sigma = 100
+@th_gigabuilding_upkeep1_sigma = 400
+@th_gigabuilding_storage_delta = 6000

@@ -1,0 +1,159 @@
+tech_th_precursor_nexus = {
+	area = physics
+	cost = @acot_tier7cost3
+	tier = 7
+	is_rare = yes
+	category = { field_manipulation }
+	ai_update_type = all
+	weight = 5
+
+	prerequisites = {
+		tech_science_nexus
+		tech_acot_dm_institute
+#		tech_precursor_enigmalith
+#		tech_precursor_science
+	}
+
+	weight_modifier = {
+		factor = 5
+	}
+
+#	prereqfor_desc = {
+#		ship = {
+#			title = "TECH_UNLOCK_ENIGMALITH_TITLE"
+#			desc = "TECH_UNLOCK_ENIGMALITH_DESC"
+#		}
+#	}
+
+	ai_weight = {
+		factor = 0		# Nou
+	}
+}
+
+tech_th_precursor_spyorb = {
+	area = physics
+	cost = @acot_tier7cost3
+	tier = 7
+	is_rare = yes
+	category = { field_manipulation }
+	ai_update_type = all
+	weight = 5
+
+	prerequisites = {
+		tech_sentry_array
+		tech_darkmatter_star_charter_dm
+#		tech_precursor_enigmalith
+#		tech_precursor_science
+	}
+
+	weight_modifier = {
+		factor = 5
+	}
+
+#	prereqfor_desc = {
+#		ship = {
+#			title = "TECH_UNLOCK_ENIGMALITH_TITLE"
+#			desc = "TECH_UNLOCK_ENIGMALITH_DESC"
+#		}
+#	}
+
+	ai_weight = {
+		factor = 0		# Nou
+	}
+}
+
+tech_th_precursor_strategy_center = {
+	area = physics
+	cost = @acot_tier7cost3
+	tier = 7
+	is_rare = yes
+	category = { field_manipulation }
+	ai_update_type = all
+	weight = 5
+
+	prerequisites = {
+		tech_strategic_coordination
+		tech_acot_dm_stronghold
+#		tech_precursor_enigmalith
+#		tech_precursor_titan
+	}
+
+	weight_modifier = {
+		factor = 5
+	}
+
+#	prereqfor_desc = {
+#		ship = {
+#			title = "TECH_UNLOCK_ENIGMALITH_TITLE"
+#			desc = "TECH_UNLOCK_ENIGMALITH_DESC"
+#		}
+#	}
+
+	ai_weight = {
+		factor = 0		# Nou
+	}
+}
+
+tech_th_precursor_dyson_sphere = {
+	area = physics
+	cost = @acot_tier7cost3
+	tier = 7
+	is_rare = yes
+	category = { field_manipulation }
+	ai_update_type = all
+	weight = 5
+
+	prerequisites = {
+		tech_dyson_sphere
+		tech_acot_dm_dark_matter_synthersizer
+#		tech_precursor_enigmalith
+#		tech_precursor_construcor
+	}
+
+	weight_modifier = {
+		factor = 5
+	}
+
+#	prereqfor_desc = {
+#		ship = {
+#			title = "TECH_UNLOCK_ENIGMALITH_TITLE"
+#			desc = "TECH_UNLOCK_ENIGMALITH_DESC"
+#		}
+#	}
+
+	ai_weight = {
+		factor = 0		# Nou
+	}
+}
+
+tech_precursor_mega_shipyard = {
+	area = physics
+	cost = @acot_tier7cost3
+	tier = 7
+	is_rare = yes
+	category = { field_manipulation }
+	ai_update_type = all
+	weight = 5
+
+	prerequisites = {
+		tech_mega_shipyard
+		tech_acot_dm_dark_matter_synthersizer
+#		tech_precursor_enigmalith
+#		tech_precursor_citadel
+	}
+
+	weight_modifier = {
+		factor = 5
+	}
+
+#	prereqfor_desc = {
+#		ship = {
+#			title = "TECH_UNLOCK_ENIGMALITH_TITLE"
+#			desc = "TECH_UNLOCK_ENIGMALITH_DESC"
+#		}
+#	}
+
+	ai_weight = {
+		factor = 0		# Nou
+	}
+}

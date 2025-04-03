@@ -1,0 +1,118 @@
+building_giga_megaworkshop_hub_acot_$tier$ = {
+	base_buildtime = @th_gigabuilding_time_$tier$
+	category = manufacturing
+	icon = "acot_compat/building_giga_megaworkshop_hub_acot_$tier$"
+
+	can_build = $boolean$ # TH is infinite
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 		@th_gigabuilding_cost_minerals_$tier$
+			$resource1$ = 	@th_gigabuilding_cost_resource1_$tier$
+			$resource2$ = 	@th_gigabuilding_cost_resource2_$tier$
+		}
+		upkeep = {
+			$resource1$ = 	@th_gigabuilding_upkeep1_$tier$
+			$resource1$ = 	@th_gigabuilding_upkeep2_$tier$
+		}
+
+		# auto production
+		upkeep = {
+			trigger = {
+				has_modifier = acot_modifier_ascended_city
+			}
+
+			alloys =		@th_overseer_$tier$_alloys_upkeep
+			unity = 		@th_overseer_$tier$_unity_upkeep
+			$resource1$ = 	@th_overseer_$tier$_resource1_upkeep
+			$resource2$ = 	@th_overseer_$tier$_resource2_upkeep
+		}
+		produces = {
+			trigger = {
+				has_modifier = acot_modifier_ascended_city
+			}
+			giga_sr_amb_megaconstruction = @th_overseer_$tier$_output
+		}
+	}
+
+	prerequisites = {
+		giga_tech_amb_supertensiles_acot_$tier$
+	}
+
+	potential = {
+		nor = { 
+			has_global_flag = acot_building_forbidden
+			has_modifier = resort_colony
+			has_modifier = slave_colony 
+			has_modifier = gestation_colony
+		}
+		has_global_flag = @giga_amb_flag
+	}
+
+	allow = {
+		$allow$
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = gestation_colony
+			NOT = { has_global_flag = @giga_amb_flag }
+		}
+	}
+
+	upgrades = {
+		$upgrade$
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = @th_gigabuilding_storage_$tier$
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_giga_megaengineering_overseer_drone_acot_$tier$_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				#is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_giga_megaengineering_overseer_acot_$tier$_add = 2
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_giga_megaengineering_overseer_drone_acot_$tier$_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				#is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_giga_megaengineering_overseer_acot_$tier$_effect_desc
+	}

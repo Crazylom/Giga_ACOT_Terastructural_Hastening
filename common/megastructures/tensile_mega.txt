@@ -1,0 +1,584 @@
+th_mega_supertensile_0 = {
+	entity = "kugelblitz_new_empty_entity"
+	construction_entity = "kugelblitz_new_empty_entity"	
+	
+	prerequisites = {
+		giga_tech_amb_supertensiles
+	}
+	
+	show_prereqs = no
+	# portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = no
+
+	build_time = 900
+	resources = {
+		category = giga_kilostructures
+		
+		produces = {
+			giga_sr_amb_megaconstruction = 10
+		}
+		
+		cost = {
+			alloys = 2000
+			unity = 500
+		}
+		
+		upkeep = { 
+			alloys = 10
+			energy = 20
+			unity = 50
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 1000
+		planet_giga_megaengineers_giga_sr_amb_megaconstruction_produces_mult = 0.02
+	}
+
+	build_outside_gravity_well = yes
+	possible = {
+		hidden_trigger = {
+			exists = starbase
+		}
+		custom_tooltip = {
+			fail_text = "requires_inside_border_or_subject"
+			OR = {
+				is_inside_border = from
+				AND = {
+					exists = owner
+					owner = {
+						is_subject = yes
+						overlord = { is_same_value = from }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system" # or is in my subject's territory
+			OR = {
+				NOT = {
+					any_system_planet = {
+						is_surveyed = {
+							who = prev.from
+							status = no
+						}
+					}
+				}
+				AND = {
+					exists = owner
+					owner = {
+						is_subject = yes
+						overlord = { is_same_value = from }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_similar_mega"
+			NOR = {
+				has_megastructure = th_mega_supertensile_0
+				has_megastructure = th_mega_supertensile_1
+				has_megastructure = th_mega_supertensile_2
+				has_megastructure = th_mega_supertensile_3
+				has_megastructure = th_mega_supertensile_delta
+				has_megastructure = th_mega_supertensile_alpha
+				has_megastructure = th_mega_supertensile_phanon
+				has_megastructure = th_mega_supertensile_sigma
+			}
+		}
+	}
+}
+
+th_mega_supertensile_1 = {
+	entity = "kugelblitz_new_entity"
+	construction_entity = "kugelblitz_new_entity"	
+	upgrade_from = { th_mega_supertensile_0 }
+	
+	prerequisites = {
+	}
+	
+	show_prereqs = no
+	# portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = no
+
+	build_time = 1800
+	resources = {
+		category = giga_kilostructures
+		
+		produces = {
+			giga_sr_amb_megaconstruction = 20
+		}
+		
+		cost = {
+			energy = 10000
+			alloys = 10000
+			unity = 4000
+		}
+		
+		upkeep = { 
+			alloys = 20
+			energy = 50
+			unity = 60
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 2000
+		planet_giga_megaengineers_giga_sr_amb_megaconstruction_produces_mult = 0.04
+	}
+
+	build_outside_gravity_well = yes
+}
+
+th_mega_supertensile_2 = {
+	entity = "kugelblitz_mega_entity"
+	construction_entity = "kugelblitz_mega_entity"	
+	upgrade_from = { th_mega_supertensile_1 }
+	
+	prerequisites = {
+		tech_mega_engineering
+	}
+	
+	show_prereqs = no
+	# portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = no
+
+	build_time = 1800
+	resources = {
+		category = giga_megastructures
+		
+		produces = { 
+			giga_sr_amb_megaconstruction = 40
+		}
+		
+		cost = {
+			energy = 20000
+			alloys = 20000
+			unity = 4000
+		}
+		
+		upkeep = { 
+			alloys = 50
+			energy = 100
+			unity = 100
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 5000
+		planet_giga_megaengineers_giga_sr_amb_megaconstruction_produces_mult = 0.1
+	}
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 10000
+			unity = 1000
+		}
+	}
+	dismantle_time = 30
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		can_dismantle_megastructure = {
+			TECH = tech_mega_engineering
+		}
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 10000
+			}
+		}
+	}
+	build_outside_gravity_well = yes
+	possible = { from = { has_technology = tech_mega_engineering } }
+}
+
+th_mega_supertensile_3 = {
+	entity = "kugelblitz_giga_entity"
+	construction_entity = "kugelblitz_giga_entity"	
+	upgrade_from = { th_mega_supertensile_2 }
+	
+	prerequisites = {
+		tech_mega_engineering
+	}
+	
+	show_prereqs = no
+	# portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = no
+
+	build_time = 1800
+	resources = {
+		category = giga_gigastructures
+		
+		produces = { 
+			giga_sr_amb_megaconstruction = 100
+		}
+		
+		cost = {
+			energy = 40000
+			alloys = 20000
+			unity = 10000
+		}
+		
+		upkeep = { 
+			alloys = 200
+			energy = 400
+			unity = 400
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 10000
+		planet_giga_megaengineers_giga_sr_amb_megaconstruction_produces_mult = 0.15
+	}
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 15000
+			unity = 2000
+		}
+	}
+	dismantle_time = 30
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		can_dismantle_megastructure = {
+			TECH = tech_mega_engineering
+		}
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 15000
+				energy = 20000
+			}
+		}
+	}
+	build_outside_gravity_well = yes
+	possible = { 
+		from = { 
+			has_technology = tech_mega_engineering 
+			has_gigastructural_constructs = yes
+		} 
+	}
+}
+
+th_mega_supertensile_delta = {
+	entity = "dm_aot_enigmalith_entity"
+	construction_entity = "dm_aot_enigmalith_construction_entity"	
+	upgrade_from = { th_mega_supertensile_3 }
+	
+	prerequisites = {
+		tech_precursor_enigmalith
+	}
+	
+	show_prereqs = no
+	# portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = no
+
+	build_time = 1800
+	resources = {
+		category = giga_gigastructures
+		
+		produces = { 
+			giga_sr_amb_megaconstruction = 200
+		}
+		
+		cost = {
+			energy = 20000
+			alloys = 10000
+			unity = 4000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 500
+		}
+		
+		upkeep = { 
+			alloys = 400
+			energy = 500
+			unity = 1000
+			sr_dark_matter = 100
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 30000
+		planet_giga_megaengineers_giga_sr_amb_megaconstruction_produces_mult = 0.25
+		megastructures_upkeep_mult = -0.02
+	}
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 15000
+			unity = 2000
+		}
+	}
+	dismantle_time = 30
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		can_dismantle_megastructure = {
+			TECH = tech_mega_engineering
+			TECH = tech_precursor_enigmalith
+		}
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 15000
+				energy = 20000
+			}
+		}
+	}
+	build_outside_gravity_well = yes
+	possible = { 
+		from = { 
+			has_technology = tech_mega_engineering 
+			has_technology = tech_precursor_enigmalith
+			has_gigastructural_constructs = yes
+		} 
+	}
+}
+
+th_mega_supertensile_alpha = {
+	entity = "ae_aot_enigmalith_entity"
+	construction_entity = "ae_aot_enigmalith_advanced_entity"	
+	upgrade_from = { th_mega_supertensile_delta }
+	
+	prerequisites = {
+		tech_precursor_enigmalith_ae
+	}
+	
+	show_prereqs = no
+	# portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = no
+
+	build_time = 1800
+	resources = {
+		category = giga_gigastructures
+		
+		produces = { 
+			giga_sr_amb_megaconstruction = 400
+		}
+		
+		cost = {
+			energy = 100000
+			alloys = 40000
+			unity = 12000
+			sr_dark_matter = 10000
+			acot_sr_dark_energy = 10000
+		}
+		
+		upkeep = { 
+			alloys = 2000
+			energy = 2000
+			unity = 800
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 100000
+		planet_giga_megaengineers_giga_sr_amb_megaconstruction_produces_mult = 0.5
+		megastructures_upkeep_mult = -0.05
+		starbase_shipyard_build_time_mult = -0.01
+		shipsize_starbase_outpost_build_speed_mult = 1
+	}
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 30000
+			unity = 4000
+		}
+	}
+	dismantle_time = 30
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		can_dismantle_megastructure = {
+			TECH = tech_mega_engineering
+			TECH = tech_precursor_enigmalith
+		}
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 30000
+				energy = 30000
+				sr_dark_matter = 5000
+				acot_sr_dark_energy = 5000
+			}
+		}
+	}
+	build_outside_gravity_well = yes
+	possible = { 
+		from = { 
+			has_technology = tech_mega_engineering 
+			has_technology = tech_precursor_enigmalith_ae
+			has_gigastructural_constructs = yes
+		} 
+	}
+}
+
+th_mega_supertensile_phanon = {
+	entity = "phanon_aot_enigmalith_super_entity"
+	construction_entity = "phanon_aot_enigmalith_super_entity"	
+	upgrade_from = { th_mega_supertensile_alpha }
+	
+	prerequisites = {
+		tech_precursor_enigmalith_pe
+	}
+	
+	show_prereqs = no
+	# portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = no
+
+	build_time = 1800
+	resources = {
+		category = giga_gigastructures
+		
+		giga_sr_amb_megaconstruction = 1000
+		
+		cost = {
+			energy = 150000
+			alloys = 40000
+			unity = 10000
+			sr_dark_matter = 4000
+			acot_sr_dark_energy = 4000
+			aot_sr_runic_energy = 10000
+		}
+		
+		upkeep = { 
+			alloys = 2000
+			energy = 4000
+			unity = 1000
+			aot_sr_runic_energy = 500
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 200000
+		planet_giga_megaengineers_giga_sr_amb_megaconstruction_produces_mult = 1
+		megastructures_upkeep_mult = -0.10
+		starbase_shipyard_build_time_mult = -0.02
+		shipsize_starbase_outpost_build_speed_mult = 2
+	}
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 15000
+			unity = 2000
+		}
+	}
+	dismantle_time = 30
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		can_dismantle_megastructure = {
+			TECH = tech_mega_engineering
+			TECH = tech_precursor_enigmalith_pe
+		}
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 15000
+				energy = 20000
+			}
+		}
+	}
+	build_outside_gravity_well = yes
+	possible = { 
+		from = { 
+			has_technology = tech_mega_engineering 
+			has_technology = tech_precursor_enigmalith_pe
+			has_gigastructural_constructs = yes
+		} 
+	}
+}
+
+th_mega_supertensile_sigma = {
+	entity = "se_aot_enigmalith_super_entity"
+	construction_entity = "se_aot_enigmalith_super_entity"	
+	upgrade_from = { th_mega_supertensile_phanon }
+	
+	prerequisites = {
+		tech_precursor_enigmalith_se
+	}
+	
+	show_prereqs = no
+	# portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = no
+
+	build_time = 1800
+	resources = {
+		category = giga_gigastructures
+		
+		produces = {
+			giga_sr_amb_megaconstruction = 2000
+		}
+		
+		cost = {
+			energy = 400000
+			alloys = 40000
+			acot_sr_stellarite = 20000
+		}
+		
+		upkeep = { 
+			alloys = 2000
+			energy = 5000
+			unity = 1000
+			acot_sr_stellarite = 2000
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 1000000
+		planet_giga_megaengineers_giga_sr_amb_megaconstruction_produces_mult = 2
+		megastructures_upkeep_mult = -0.10
+		starbase_shipyard_build_time_mult = -0.04
+		shipsize_starbase_outpost_build_speed_mult = 5
+	}
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 50000
+			unity = 10000
+			acot_sr_stellarite = 2000
+		}
+	}
+	dismantle_time = 30
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		can_dismantle_megastructure = {
+			TECH = tech_mega_engineering
+			TECH = tech_precursor_enigmalith_se
+		}
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 50000
+				energy = 50000
+				acot_sr_stellarite = 20000
+			}
+		}
+	}
+	build_outside_gravity_well = yes
+	possible = { 
+		from = { 
+			has_technology = tech_mega_engineering 
+			has_technology = tech_precursor_enigmalith_se
+			has_gigastructural_constructs = yes
+		} 
+	}
+}
+

@@ -1,0 +1,166 @@
+﻿l_english:
+ giga_tech_amb_supertensiles_acot_delta: "Dark matter mega-utilization"
+ giga_tech_amb_supertensiles_acot_delta_desc: "Adding £sr_dark_matter£ §Y$sr_dark_matter$§! into the process of creating supertensile materials could theoretically revolutionize the entire field with it's unique properties. No more dedicated planets for producing these valuable resources anymore."
+ 
+ giga_tech_amb_supertensiles_acot_alpha: "Dark energy terastructural assembly triumth"
+ giga_tech_amb_supertensiles_acot_alpha_desc: "Thanks to incredible endeavor of our scientists in recreating precursor technologies, we can properly add £acot_sr_dark_energy£ §Y$acot_sr_dark_energy$§! to the supertensile process, yielding even more supertensile materials for the same price. After it is done, basically no megastrucutre would take longer than a decade, at worst. \n\nOur ascension is near."
+
+ giga_tech_amb_supertensiles_acot_phanon: "Phanon who touched my spaghett"
+ giga_tech_amb_supertensiles_acot_phanon_desc: "Phanon, apparently, knew we live in a simulation. But instead of cowardly committing liven't, they harnessed inefficient code of it, and then mixed it with £aot_sr_runic_power£ §Y$aot_sr_runic_power$§! to turn into ultimate tensile material - code spaghetti! \nOn this tier of technological advancement, we can basically ask to create the megastructure we want without practical delay, and lay down every single piece at once, across entire timeline it takes. \n\nDSP time."
+
+ giga_tech_amb_supertensiles_acot_sigma: "Behemoth-wide stellarite madness spreading"
+ giga_tech_amb_supertensiles_acot_sigma_desc: "Jokes on you, Alpha tech was not the end for this field yet! With the literal power of the stars, £acot_sr_stellarite£ §Y$acot_sr_stellarite$§! can be processed by mere thoughts alone. But how would the one satisfy ever-growing demand for supertensiles without going mad? \n\nThats the trick: you must go insane first to work in that field. Considering how easily stellarite allows for casual time paradoxes and extradimensional exploitation, it will take truly insane idividuals to come up with different way of production that is not only efficient, but low-cost. \n\nYes, Sheogorath."
+ 
+ #tech_th_runic_pokemon: "Runic tensile devourer summoning"
+ #tech_th_runic_pokemon_desc: "Runic power is the way of the gods like us, and materials for megastructure construction are still low and slow even then. There should be, must be, IS a better way. By sacrifising eons worth of our research - the amount that would ascend any onther empire to the likes of Fallen Empires - into the mirror, we could get a favor from our shroud master. With their ultimate answer, shall be ultimate way of tensile creation - Tensile Devourers! the eaters of worlds, and poopers of plank strings, that will be used for our production needs instead. \n\nHow is it better than code spaghetti? Idunno, ask Shroud master. \n\nAre they cute tho? Mayhaps."
+ 
+ 
+ building_giga_megaworkshop_hub: "Megaconstruction Center"
+ building_giga_megaworkshop_hub_plural: "Megaconstruction Centers"
+ building_giga_megaworkshop_hub_desc: "Trained professionals in fleet logistics and large-scale engineering coordinate arrays of tools within these buildings. The only thing stronger than their ambition are megaconstruction materials obtained here."
+ building_giga_megaworkshop_hub_count_condition: ""
+ mod_planet_building_giga_megaworkshop_hub_build_speed_mult: "$building_giga_megaworkshop_hub$ Build Speed"
+
+ building_giga_megaworkshop_hub_acot_delta: "Gigastructural Assembler"
+ building_giga_megaworkshop_hub_acot_delta_plural: "Gigastructural Assemblers"
+ #building_giga_megaworkshop_hub_acot_delta_desc: "Honestly quite incredible achievement of dark architechture. Spanning just a few hundred meters in every direction, yet housing much more than it suggests. Foundries, trasmutation stations and dark grids are in abundance, and are all what is needed for the workers to create. Megastructing commence."
+ building_giga_megaworkshop_hub_acot_delta_desc: "Singularity production becomes trivial with technology such as this. Spaghettification is a surprisingly efficient process for creating increasingly more powerful tensile materials...we just didn't have hardlight for precision before."
+ building_giga_megaworkshop_hub_acot_delta_count_condition: ""
+ mod_planet_building_giga_megaworkshop_hub_acot_delta_build_speed_mult: "$building_giga_megaworkshop_hub_acot_delta$ Build Speed"
+ 
+ building_giga_megaworkshop_hub_acot_alpha: "Terastructural Hastener"
+ building_giga_megaworkshop_hub_acot_alpha_plural: "Terastructural Hasteners"
+ #building_giga_megaworkshop_hub_acot_alpha_desc: "In these buildings, made out of notoriously complex mix of £sr_dark_matter£ §Y$sr_dark_matter$§! and £acot_sr_dark_energy£ §Y$acot_sr_dark_energy$§!, Some of the greatest people of the empire can assemble and invent new ways of producing large numbers of supertensile material. Now, almost nothing stops us from building anything, of any possible size. \n\nThe future is now."
+ building_giga_megaworkshop_hub_acot_alpha_desc: "With £sr_dark_matter£ §Y$sr_dark_matter$§! and £acot_sr_dark_energy£ §Y$acot_sr_dark_energy$§!'s potential released, so were our capabilities in mass space architecture construction. Alpha project gave us insight into producing new kinds of supertensile material we could not even imagine. \nThe future is now."
+ building_giga_megaworkshop_hub_acot_alpha_count_condition: ""
+ mod_planet_building_giga_megaworkshop_hub_acot_alpha_build_speed_mult: "$building_giga_megaworkshop_hub_acot_alpha$ Build Speed"
+ 
+ building_giga_megaworkshop_hub_acot_phanon: "Phanon code spaghetti boring site"
+ building_giga_megaworkshop_hub_acot_phanon_plural: "Phanon code spaghetti boring operations"
+ #building_giga_megaworkshop_hub_acot_phanon_desc: "In here, the constructs of unfathomable design bore down into reality itself to extract it's notorious and inefficient code, to then turn into the greatest megastructure-producing material - phanon spaghetti(tm)! \n\nEver wanted to build your own dyson sphere around the sun in your house? Or maybe you are more of a warmonger and would like to fight people with your own planet-ships? Or how about simply enjoying a good meal after a long day's work serving? Phanon Spaghetti can satisfy it all! n\n\Highest-grade workers with highest grade genetics operate highest-grade codality bores and then cook the highest-grade material into highest-grade spaghetti, highest-saturation red you ever saw! \n\n PS:No, Nintendo, this is not yours."
+ building_giga_megaworkshop_hub_acot_phanon_desc: "Mysterious £aot_sr_runic_power£ §Y$aot_sr_runic_power$§! powers reality-shattering drills paving the way to foundation of existence itself - Code Spaghetti! These infinitely elongating and knotting strands lay foundation to our greatest projects not even imagination may grasp. \n Highest-grade workers, with highest-grade genetics and highest-grade cybernetics, operate highest-grade reality drills, to extract highest-grade spaghetti code and thin it out into highest-grade strands, with the highest-saturation red you ever saw!"
+ building_giga_megaworkshop_hub_acot_phanon_count_condition: ""
+ mod_planet_building_giga_megaworkshop_hub_acot_phanon_build_speed_mult: "$building_giga_megaworkshop_hub_acot_phanon$ Build Speed"
+ 
+ building_giga_megaworkshop_hub_acot_sigma: "Stellarite Cheesering Isle"
+ building_giga_megaworkshop_hub_acot_sigma_plural: "Stellarite Cheesering Isles"
+ #building_giga_megaworkshop_hub_acot_sigma_desc: "With stellarite power, the new era of production has begun. Thanks to assistance of Stellarite Gourmets, the isles of this complex are composed out of dough, sauce and stellarite itself, the artists use respectfully given landscape to compose the simphony of the most delicious Dyson spheres, decompressors, and mega-shipyards. In the form of CHEESE! \n\nThe sole director of each facility is known as Sheogorath, utterly mad and dedicated worker that will silence anyone who stands in their way of delivering highest-quality cheese, for everyone's little, tiny, puny need. \n\nThey will not tolerate the ones who steal another man's cheese."
+ building_giga_megaworkshop_hub_acot_sigma_desc: "The power of £acot_sr_stellarite£ §Y$acot_sr_stellarite$§! star in our grasp is quite literally MADDENING! Many use their delirium to paint galaxy yellow with kilo-, mega-, giga- and tera-grade cheeses from Stellarite Gourmets' approved Cheesering Isles! \n\n Only one, with authority over stellarite lords. Only one, who will silence anyone standing in the way of delivering highest-quality cheese, for everyone's little, tiny, puny need. Only one, with the right to execute those who steal another man's cheese. \n §YSheogorath§!!"
+ building_giga_megaworkshop_hub_acot_sigma_count_condition: ""
+ mod_planet_building_giga_megaworkshop_hub_acot_sigma_build_speed_mult: "$building_giga_megaworkshop_hub_acot_sigma$ Build Speed"
+ 
+ #building_giga_megaworkshop_hub_acot_runic: "Runic trainer house"
+ #building_giga_megaworkshop_hub_acot_runic_plural: "Runic trainer houses"
+ #building_giga_megaworkshop_hub_acot_runic_desc: "The trainers of runic devourerers live there. Each inside houses practically entirely new world to explore and enjoy, for runic power is that awesome. it can even have alternative universes within, so even the harshest of trainers could still find something new, and fullfill their job. Infinite combination of infinite positions in infinite timeframe across infinite universe breeds even more infinite variations of Runic Fibers(tm) from infinitely delusional trainers. \n\nDevourerers like to go into alternative universe with the sole inhabitant and pose as 'devourer of Gods', to then mess with them."
+ #building_giga_megaworkshop_hub_count_acot_runic_condition: ""
+ #mod_planet_building_giga_megaworkshop_hub_acot_runic_build_speed_mult: "$building_giga_megaworkshop_hub_acot_runic$ Build Speed"
+ 
+ 
+ building_giga_megaworkshop: "Megastructural Bureau"
+ building_giga_megaworkshop_plural: "Megastructural Bureaus"
+ building_giga_megaworkshop_desc: "Sprawling computing arrays and business rooms feel these facilities, infitisimally optimizing every project our empire partakes in."
+ mod_planet_building_giga_megaworkshop_build_speed_mult: "$building_giga_megaworkshop$ Build Speed"
+
+ building_giga_megaworkshop_acot_delta: "Gigastructural Buraeu of Efficiency"
+ building_giga_megaworkshop_plural: "Gigastructural Bureaus of Efficiency"
+ building_giga_megaworkshop_acot_delta_desc: "£sr_dark_matter£ §Y$sr_dark_matter$§! permits us as much of control over space as our bureaucracy revolving around projects of grandiose scale, be it megastructures, space stations, or terrestrial construction."
+ mod_planet_building_giga_megaworkshop_acot_delta_build_speed_mult: "$building_giga_megaworkshop_acot_delta$ Build Speed"
+
+ building_giga_megaworkshop_acot_alpha: "Terastructural Bureau of Hastening"
+ building_giga_megaworkshop_plural: "Terastructural Bureaus of Hastening"
+ building_giga_megaworkshop_acot_alpha_desc: "Complete control over spacial efficiency £acot_sr_dark_energy£ §Y$acot_sr_dark_energy$§! brings us, each terastructural bureau could efficienty run entire sectors worth of planets. With this efficiency, we will go further..."
+ mod_planet_building_giga_megaworkshop_acot_alpha_build_speed_mult: "$building_giga_megaworkshop_acot_alpha$ Build Speed"
+ 
+ building_giga_megaworkshop_acot_phanon: "Phanon Pasta Tower"
+ building_giga_megaworkshop_plural: "Megastructural Bureaus"
+ building_giga_megaworkshop_acot_phanon_desc: "Pasta Face..? \n £aot_sr_runic_power£ §Y$aot_sr_runic_power$§! is an incredibly powerful, mind-bending resource competing with controlling reality itself...so why not make it work in our favor? In those spires compiled out of phanon spaghetti, most efficient ways of altering the way information and resources flow on the scale of our empire are born."
+ mod_planet_building_giga_megaworkshop_acot_phanon_build_speed_mult: "$building_giga_megaworkshop_acot_phanon$ Build Speed"
+
+ building_giga_megaworkshop_acot_sigma: "Stellarite Madness Palace"
+ building_giga_megaworkshop_plural: "Megastructural Bureaus"
+ #building_giga_megaworkshop_acot_sigma_desc: "If you thought the Cheesering Isles were maddening sight, behold the seat of power of Sheogoraths themselves!..Except not really. \n the maddening power of £acot_sr_stellarite£ §Y$acot_sr_stellarite$§! is, quite literally, allowing for forcing the universe work the way we want with next to no nuance. Palaces are said to contain entire universe inside inside of which we are to do what we please to then affect the universe outside, in our favor."
+ building_giga_megaworkshop_acot_sigma_desc: "Maddening power of £acot_sr_stellarite£ §Y$acot_sr_stellarite$§! forges reality with our smallest whims. And sheogoraths are, without exaggeration, 'the Mad Gods' most fit for this! \nPocket universe perfectly resembling ours is twisted and throngled all ways, all day long, every plank time, to find the best logistical combination for more efficient construction. \n\nOnly one, to rule over stellarite lords. Only one, to silence anyone standing in the way of delivering highest-quality cheese for everyone's little, tiny, puny need. Only one, to execute anyone who steals another man's cheese."
+ mod_planet_building_giga_megaworkshop_acot_sigma_build_speed_mult: "$building_giga_megaworkshop_acot_sigma$ Build Speed"
+
+ #building_giga_megaworkshop_acot_runic: "Rofl"
+ #building_giga_megaworkshop_acot_runic_plural: "L"
+ #building_giga_megaworkshop_acot_runic_desc: "mao"
+ #mod_planet_building_giga_megaworkshop_acot_runic_build_speed_mult: "$building_giga_megaworkshop_acot_runic$ Build Speed"
+
+
+
+ job_giga_megaengineering_overseer_acot_delta: "Dark Megamogul"
+ job_giga_megaengineering_overseer_acot_delta_plural: "Dark Megamoguls"
+ job_giga_megaengineering_overseer_acot_delta_desc: "Those very skilled men utilize unique properties of dark matter to create immaculate amount of advanced supertensiles for our construction needs."
+ job_giga_megaengineering_overseer_acot_delta_effect_desc: "£job_th_delta_seer£ $job_giga_megaengineering_overseer_acot_delta_plural$ turn £alloys£ §Y$alloys$§!, £unity£ §Y$unity$§! and £sr_dark_matter£ §Y$sr_dark_matter$§! into £giga_sr_amb_megaconstruction£ §Y$giga_sr_amb_megaconstruction$§! in unseen quantities."
+ mod_job_giga_megaengineering_overseer_acot_delta_add: "$job_th_delta_seer$ Jobs"
+ mod_job_giga_megaengineering_overseer_acot_delta_per_pop: "§G+1§! $job_th_delta_seer$ Job per $VALUE$ Pops"
+ mod_job_giga_megaengineering_overseer_acot_delta_per_pop_short: "\n§G+1§! £mod_job_th_delta_seer_add£ per $VALUE$ £pop£"
+
+ job_giga_megaengineering_overseer_drone_acot_delta: "Dark Gigadrone"
+ job_giga_megaengineering_overseer_drone_acot_plural: "Dark Gigadrones"
+ job_giga_megaengineering_overseer_drone_acot_desc: "Those potent ranches of our mind utilize unique properties of dark matter to create immaculate amount of advanced supertensiles for our construction needs."
+ job_giga_megaengineering_overseer_drone_acot_desc: "£job_giga_megaengineering_overseer_drone_acot_delta£ $job_giga_megaengineering_overseer_drone_acot_delta_plural$ turn £alloys£ §Y$alloys$§!, £unity£ §Y$unity$§! and £sr_dark_matter£ §Y$sr_dark_matter$§! into £giga_sr_amb_megaconstruction£ §Y$giga_sr_amb_megaconstruction$§! in unseen quantities."
+ mod_job_giga_megaengineering_overseer_drone_acot_add: "$job_giga_megaengineering_overseer_drone_acot_delta$ Jobs"
+ mod_job_giga_megaengineering_overseer_drone_acot_per_pop: "§G+1§! $job_giga_megaengineering_overseer_drone_acot_delta$ Job per $VALUE$ Pops"
+ mod_job_giga_megaengineering_overseer_drone_acot_per_pop_short: "\n§G+1§! £mod_job_giga_megaengineering_overseer_drone_acot_delta_add£ per $VALUE$ £pop£"
+
+ job_giga_megaengineering_overseer_acot_alpha: "Ascended Gigamogul"
+ job_giga_megaengineering_overseer_acot_alpha_plural: "Ascended Gigamoguls"
+ job_giga_megaengineering_overseer_acot_alpha_desc: "With the power of both dark energy and dark matter combined, we can push our production scales even further beyond, to the horizons never before seen.Those who gave everything in the name of this title, are known as Gigamoguls. Their skill is unmatched, and their works are supreme."
+ job_giga_megaengineering_overseer_acot_alpha_effect_desc: "£job_giga_megaengineering_overseer_acot_alpha£ $job_giga_megaengineering_overseer_acot_alpha_plural$ turn a lot of £alloys£ §Y$alloys$§!, £unity£ §Y$unity$§!, £sr_dark_matter£ §Y$sr_dark_matter$§! and £acot_sr_dark_energy£ §Y$acot_sr_dark_energy$§! into even more £giga_sr_amb_megaconstruction£ §Y$giga_sr_amb_megaconstruction$§!"
+ mod_job_giga_megaengineering_overseer_acot_alpha_add: "$job_giga_megaengineering_overseer_acot_alpha$ Jobs"
+ mod_job_giga_megaengineering_overseer_acot_alpha_per_pop: "§G+1§! $job_giga_megaengineering_overseer_acot_alpha$ Job per $VALUE$ Pops"
+ mod_job_giga_megaengineering_overseer_acot_alpha_per_pop_short: "\n§G+1§! £mod_job_giga_megaengineering_overseer_acot_alpha_add£ per $VALUE$ £pop£"
+ 
+ job_giga_megaengineering_overseer_drone_acot_alpha: "Ascended Terazord"
+ job_giga_megaengineering_overseer_drone_acot_alpha_plural: "Ascended Terazords"
+ job_giga_megaengineering_overseer_drone_acot_alpha_desc: "With the power of both dark energy and dark matter combined, we can push our production scales even further beyond, to the horizons never before seen. The drones who spared their body in the name of progress, are known as Terazords. Their skill is unmatched, and their works are supreme."
+ job_giga_megaengineering_overseer_drone_acot_alpha_effect_desc: "£job_giga_megaengineering_overseer_drone_acot_alpha£ $job_giga_megaengineering_overseer_drone_acot_alpha_plural$ turn a lot of £alloys£ §Y$alloys$§!, £unity£ §Y$unity$§!, £sr_dark_matter£ §Y$sr_dark_matter$§! and £acot_sr_dark_energy£ §Y$acot_sr_dark_energy$§! into even more £giga_sr_amb_megaconstruction£ §Y$giga_sr_amb_megaconstruction$§!"
+ mod_job_giga_megaengineering_overseer_drone_acot_alpha_add: "$job_giga_megaengineering_overseer_drone_acot_alpha$ Jobs"
+ mod_job_giga_megaengineering_overseer_drone_acot_alpha_per_pop: "§G+1§! $job_giga_megaengineering_overseer_drone_acot_alpha$ Job per $VALUE$ Pops"
+ mod_job_giga_megaengineering_overseer_drone_acot_alpha_per_pop_short: "\n§G+1§! £mod_job_giga_megaengineering_overseer_drone_acot_alpha_add£ per $VALUE$ £pop£"
+
+ job_giga_megaengineering_overseer_acot_phanon: "Phanon Spaghetti Cooker"
+ job_giga_megaengineering_overseer_acot_phanon_plural: "Phanon Spaghetti Cookers"
+ job_giga_megaengineering_overseer_acot_phanon_desc: "With even more awesome runic power, the boundaries of reality itself shudder and twist to our will. Some who saw the underlying mechanisms of this world turn the malfunctioning or otherwise messy code into phanon spaghetti(tm) - the ultimate solution for-oh just get the damn thing. \n\nThough, for some reason, every single worker who is carrying the title turnins italian and start to wear red caps."
+ job_giga_megaengineering_overseer_acot_phanon_effect_desc: "£job_giga_megaengineering_overseer_acot_phanon£ $job_giga_megaengineering_overseer_acot_phanon_plural$ turn unkown value of £alloys£ §Y$alloys$§!, £unity£ §Y$unity$§!, and a pinch of £aot_sr_runic_power£ §Y$aot_sr_runic_power$§! into behemoth amounts of £giga_sr_amb_megaconstruction£ §Y$giga_sr_amb_megaconstruction$§!, mamma-mia!"
+ mod_job_giga_megaengineering_overseer_acot_phanon_add: "$job_giga_megaengineering_overseer_acot_phanon$ Jobs"
+ mod_job_giga_megaengineering_overseer_acot_phanon_per_pop: "§G+1§! $job_giga_megaengineering_overseer_acot_phanon$ Job per $VALUE$ Pops"
+ mod_job_giga_megaengineering_overseer_acot_phanon_per_pop_short: "\n§G+1§! £mod_job_giga_megaengineering_overseer_acot_phanon_add£ per $VALUE$ £pop£"
+
+ job_giga_megaengineering_overseer_drone_acot_phanon: "Phanon Spaghetti Boiler"
+ job_giga_megaengineering_overseer_drone_acot_phanon_plural: "Phanon Spaghetti Boilers"
+ job_giga_megaengineering_overseer_drone_acot_phanon_desc: "With even more awesome runic power, the boundaries of reality itself shudder and twist to our will. Some who saw the underlying mechanisms of this world turn the malfunctioning or otherwise messy code into phanon spaghetti(tm) - the ultimate solution for-oh just get the damn thing. \n\nThough, for some reason, every single drone who is carrying the title turns italian and start to wear green caps."
+ job_giga_megaengineering_overseer_drone_acot_phanon_effect_desc: "£job_giga_megaengineering_overseer_drone_acot_phanon£ $job_giga_megaengineering_overseer_drone_acot_phanon_plural$ turn unkown value of £alloys£ §Y$alloys$§!, £unity£ §Y$unity$§!, and a pinch of £aot_sr_runic_power£ §Y$aot_sr_runic_power$§! into behemoth amounts of £giga_sr_amb_megaconstruction£ §Y$giga_sr_amb_megaconstruction$§!, mamma-mia!"
+ mod_job_giga_megaengineering_overseer_drone_acot_phanon_add: "$job_giga_megaengineering_overseer_drone_acot_phanon$ Jobs"
+ mod_job_giga_megaengineering_overseer_drone_acot_phanon_per_pop: "§G+1§! $job_giga_megaengineering_overseer_drone_acot_phanon$ Job per $VALUE$ Pops"
+ mod_job_giga_megaengineering_overseer_drone_acot_phanon_per_pop_short: "\n§G+1§! £mod_job_giga_megaengineering_overseer_drone_acot_phanon_add£ per $VALUE$ £pop£"
+
+ job_giga_megaengineering_overseer_acot_sigma: "Cheese Collector"
+ job_giga_megaengineering_overseer_acot_sigma_plural: "Cheese Collectors"
+ job_giga_megaengineering_overseer_acot_sigma_desc: "With the incredible help from stellarite gourme masters, Cheese Collectors scavenge the cheesering isle they are assigned to, to then create all varieties of supertensile material...out of CHEEZE! The likes of Susu Masam, Circassian, Sakura, Limburger, Roquefort, Cheddar, the forbidden cheese, and of course Day-dra assorti, there are all the varieties you will ever need to construct the struct you need, from gateway up to systemcraft. \n\nNever disrespect the cheese."
+ job_giga_megaengineering_overseer_acot_sigma_effect_desc: "£job_th_sigma_seer£ $job_giga_megaengineering_overseer_acot_sigma_plural$ turn £alloys£ §Y$alloys$§!, £unity£ §Y$unity$§!, and £acot_sr_stellarite£ §Y$acot_sr_stellarite$§! alongside cheese into £giga_sr_amb_megaconstruction£ §Y$giga_sr_amb_megaconstruction$§!, with extra dip"
+ mod_job_giga_megaengineering_overseer_acot_sigma_add: "$job_giga_megaengineering_overseer_acot_sigma$ Jobs"
+ mod_job_giga_megaengineering_overseer_acot_sigma_per_pop: "§G+1§! $job_giga_megaengineering_overseer_acot_sigma$ Job per $VALUE$ Pops"
+ mod_job_giga_megaengineering_overseer_acot_sigma_per_pop_short: "\n§G+1§! £mod_job_giga_megaengineering_overseer_acot_sigma_add£ per $VALUE$ £pop£"
+
+ job_giga_megaengineering_overseer_drone_acot_sigma: "Cheese Aging Host"
+ job_giga_megaengineering_overseer_drone_acot_sigma_plural: "Cheese Aging Hosts"
+ job_giga_megaengineering_overseer_drone_acot_sigma_desc: "With the incredible help from stellarite alloy master-drones, Cheese Aging Hosts scavenge the cheesering isle they are assigned to, to then create all varieties of supertensile material...out of CHEEZE! The likes of Susu Masam, Circassian, Sakura, Limburger, Roquefort, Cheddar, the forbidden cheese, and of course Day-dra assorti, there are all the varieties you will ever need to construct the struct you need, from gateway up to systemcraft. \n\nNever disrespect the cheese."
+ job_giga_megaengineering_overseer_drone_acot_sigma_effect_desc: "£job_giga_megaengineering_overseer_drone_acot_sigma£ $job_giga_megaengineering_overseer_drone_acot_sigma_plural$ turn £alloys£ §Y$alloys$§!, £unity£ §Y$unity$§!, and £acot_sr_stellarite£ §Y$acot_sr_stellarite$§! alongside cheese into £giga_sr_amb_megaconstruction£ §Y$giga_sr_amb_megaconstruction$§!, with extra dip!"
+ mod_job_giga_megaengineering_overseer_drone_acot_sigma_add: "$job_giga_megaengineering_overseer_drone_acot_sigma$ Jobs"
+ mod_job_giga_megaengineering_overseer_drone_acot_sigma_per_pop: "§G+1§! $job_giga_megaengineering_overseer_drone_acot_sigma$ Job per $VALUE$ Pops"
+ mod_job_giga_megaengineering_overseer_drone_acot_sigma_per_pop_short: "\n§G+1§! £mod_job_giga_megaengineering_overseer_drone_acot_sigma_add£ per $VALUE$ £pop£"
+
+ #th_menu.1.name: "Terastructural Hastening Settings"
+ #th_menu.1.desc: "This window is present to allow easy setup of Terastructural hastening's buildings and jobs. By default, mod is setup to mimic Gigastructural Engineering's ACOT tensile compatibility buildings being as close to 'vanilla' experience as possible without drastically impacting the balance. \n\n Either leave things as is, make them stronger, or weaker."
+ #th_menu.1
+
+ #job_runic_trainer: "Runic Devourerer trainer"
+ #job_runic_trainer_plural: "Runic Devourerer trainers"
+ #job_runic_trainer_desc: "As promised, the power of true runic power, and with it, Shroud Master granted us even better alternative for supertensile production. Those incredible trainers who dedicated their now eternal life to their work and companions - runic devourerers. \n\nTrainers spend every millisecond of their life to the rituals like leveling, move balancing, EV training, IV maxing, and SM-knows-what. All in order to maximize runic devourerers' runic fibers(tm) output. \n\nDont ask what is it, though."
+ #job_runic_trainer_effect_desc: "£job_runic_trainer£ $job_runic_trainer_plural$ use £alloys£ §Y$alloys$§!, £unity£ §Y$unity$§!, and £aot_sr_aot_sr_runic_power£ §Y$aot_sr_aot_sr_runic_power$§! to train devoureres and output literal shitload of £giga_sr_amb_megaconstruction£ §Y$giga_sr_amb_megaconstruction$§!"
+ #mod_job_runic_trainer_add: "$job_runic_trainer$ Jobs"
+ #mod_job_runic_trainer_per_pop: "§G+1§! $job_runic_trainer$ Job per $VALUE$ Pops"
+ #mod_job_runic_trainer_per_pop_short: "\n§G+1§! £mod_job_runic_trainer_add£ per $VALUE$ £pop£" 

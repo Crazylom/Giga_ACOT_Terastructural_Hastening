@@ -1,0 +1,23 @@
+namespace = th_gateway
+
+country_event = {
+	id = th_gateway_de.1
+	title = "th_gateway_de.1.name"
+	desc = "th_gateway_de.desc"
+	picture = GFX_evt_th_giga_wallace
+	is_triggered_only = yes
+	
+	trigger = {
+		last_increased_tech = tech_th_precursor_gateway_delta
+	}
+
+	immediate = {
+		from = {
+			set_variable = { which = gate_user value = @root }
+		}
+	}
+	option = {
+		name = "th_gateway_de.1.a"
+		custom_tooltip = "th_gateway_de.1.a.tooltip"
+	}
+}

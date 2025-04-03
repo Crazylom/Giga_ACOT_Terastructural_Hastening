@@ -1,0 +1,36 @@
+th_precursor_gateway_net = {
+	name = th_precursor_gateway_net
+	is_pathfind = yes
+	uses_action = no
+	windup_time = 0
+	winddown_time = 0
+	ftl_multiplier = 0	
+	requires_exploration = no
+	always_active = no
+	remember_instances = no
+	galactic_map_tooltip_header = th_precursor_gateway_net
+	galactic_map_tooltip_desc = th_precursor_gateway_net_desc
+	connection_type = any_other
+	animation_time = 1
+	icon_frame = 24
+	ftl_ship_effect = "gateway_ftl_ship_effect_entity"
+	ftl_bypass_effect = "gateway_ftl_bypass_effect_entity"
+	prerequisites = {
+		tech_th_precursor_gateway_delta
+	}
+
+	country_can_use = {
+		custom_tooltip = {
+			fail_text = "gateway_too_primitive"
+			has_technology = tech_th_precursor_gateway_delta
+		}
+		custom_tooltip = {
+			fail_text = "gateway_locked"
+			check_variable = {
+				which = gate_user 
+				value = owner.gate_owner
+		}
+	}
+
+	on_action = "on_entering_gateway"
+}
