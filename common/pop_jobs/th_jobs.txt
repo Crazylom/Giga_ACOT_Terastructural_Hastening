@@ -1,0 +1,573 @@
+#Getajoblmao
+th_gigaseer_delta = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_dm_gigastructural_assembler
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = 10
+		}
+		upkeep = {
+			alloys = 10
+			unity = 10
+			sr_dark_matter = 2
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_erudite
+		}		
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+				has_trait = trait_brainslug
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_natural_engineers
+				has_trait = trait_natural_physicists
+				has_trait = trait_natural_sociologists
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = job_dm_gigaseer
+		}		
+	}
+}
+
+th_gigadrone_delta = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_dm_gigastructural_assembler
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = 10
+		}
+		upkeep = {
+			alloys = 20
+			unity = 10
+			sr_dark_matter = 2
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = dm_gigadrone
+		}
+	}
+}
+
+th_gigaseer_alpha = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_ae_terastructural_hastener
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = 15
+		}
+		upkeep = {
+			alloys = 20
+			unity = 20
+			sr_dark_matter = 5
+			acot_sr_dark_energy = 5
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_erudite
+		}		
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+				has_trait = trait_brainslug
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_natural_engineers
+				has_trait = trait_natural_physicists
+				has_trait = trait_natural_sociologists
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = job_ae_teraseer
+		}		
+	}
+}
+
+th_gigadrone_alpha = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_ae_terastructural_hastener
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_drone_job
+	
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = 15
+		}
+		upkeep = {
+			alloys = 20
+			unity = 20
+			sr_dark_matter = 5
+			acot_sr_dark_energy = 5
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = dm_teradrone
+		}
+	}
+}
+
+#Requires Acquisition Of Technologies (AOT) addon
+th_gigadseer_phanon = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_phanon_spaghett_extracting_facility
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = 60
+		}
+		upkeep = {
+			alloys = 25
+			unity = 25
+			aot_sr_runic_power = 25
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_erudite
+		}		
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+				has_trait = trait_brainslug
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_natural_engineers
+				has_trait = trait_natural_physicists
+				has_trait = trait_natural_sociologists
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = job_phanon_mario
+		}		
+	}
+}
+
+th_gigadrone_phanon = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_phanon_spaghett_extracting_facility
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_drone_job
+	
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = 60
+		}
+		upkeep = {
+			alloys = 25
+			unity = 25
+			aot_sr_runic_power = 25
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = job_phanon_luigi
+		}		
+	}
+}
+
+th_gigaseer_sigma = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_stellarite_cheesering_isle
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = 150
+		}
+		upkeep = {
+			alloys = 100
+			unity = 50
+			acot_sr_stellarite = 10
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_erudite
+		}		
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+				has_trait = trait_brainslug
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_natural_engineers
+				has_trait = trait_natural_physicists
+				has_trait = trait_natural_sociologists
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = job_stellarite_pizzaboy
+		}		
+	}
+}
+
+th_gigadrone_sigma = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_stellarite_cheesering_isle
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_drone_job
+	
+	resources = {
+		category = planet_giga_megaengineering_overseers
+		produces = {
+			giga_sr_amb_megaconstruction = 150
+		}
+		upkeep = {
+			alloys = 100
+			unity = 50
+			acot_sr_stellarite = 10
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_job = job_stellarite_pizzahost
+		}		
+	}
+}
+
+#Removed due to assets used not being released yet
+
+#Requires Secrets Of The Shroud (SOTS) addon
+#runic_trainer = {
+#	category = specialist
+#	condition_string = SPECIALIST_JOB_TRIGGER
+#	building_icon = building_runic_sky_dome
+#	clothes_texture_index = 3
+#
+#	possible_pre_triggers = {
+#		has_owner = yes
+#		is_being_purged = no
+#		is_being_assimilated = no
+#	}
+#
+#	possible_precalc = can_fill_specialist_job
+#	possible = {
+#		complex_specialist_job_check_trigger = yes
+#	}
+#	
+#	resources = {
+#		category = strategic_resoucres
+#		produces = {
+#			giga_sr_amb_megaconstruction = 1000
+#			megastructures_produces_mult = 0.2
+#		}
+#		upkeep = {
+#			alloys = 10
+#			unity = 20
+#			sm_sr_perfect_runic_energy = 2
+#		}
+#	}
+#	
+#	weight = {
+#		weight = @specialist_job_weight
+#		modifier = {
+#			factor = 0.2
+#			has_citizenship_rights = no	
+#			NOT = { has_trait = trait_mechanical }
+#		}
+#		modifier = {
+#			factor = 2
+#			has_living_standard = { type = living_standard_academic_privilege }
+#		}
+#		modifier = {
+#			factor = 3
+#			has_trait = trait_erudite
+#		}		
+#		modifier = {
+#			factor = 2
+#			OR = {
+#				has_trait = trait_robot_logic_engines
+#				has_trait = trait_intelligent
+#				has_trait = trait_brainslug
+#			}
+#		}
+#		modifier = {
+#			factor = 1.5
+#			OR = {
+#				has_trait = trait_natural_engineers
+#				has_trait = trait_natural_physicists
+#				has_trait = trait_natural_sociologists
+#			}
+#		}
+#		modifier = {
+#			factor = 0.1
+#			can_take_servant_job = yes
+#		}
+#		modifier = {
+#			factor = 1.5
+#			has_job = job_runic_trainer
+#		}		
+#	}
+#}

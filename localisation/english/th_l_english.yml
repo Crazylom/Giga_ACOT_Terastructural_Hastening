@@ -1,0 +1,182 @@
+﻿l_english:
+ 
+######## OTHERS
+
+ acot_th_precursor_science_nexus_portal: "Precursor Academy Portal"
+ acot_th_precursor_science_nexus_portal_DESC: "16 layers of dimensionally-nested supercomputers organize this complex's dimensional anchors, ensuring there is enough space to store plebian knowledge."
+ acot_th_precursor_science_nexus_portal_MEGASTRUCTURE_DETAILS: "The Academy provides research speed and scientic resources."
+
+ acot_th_precursor_science_nexus_1: "Precursor Academy"
+ acot_th_precursor_science_nexus_1_DESC: "32 layers of dimensionally-nested supercomputers organize daily schedule of every scholar working aboard to meet unseen efficiency standards. Planet-worth of scholars can now call this home."
+ acot_th_precursor_science_nexus_1_MEGASTRUCTURE_DETAILS: "The Academy provides research speed and scientic resources."
+
+ acot_th_precursor_science_nexus_2: "Precursor Greater Academy"
+ acot_th_precursor_science_nexus_2_DESC: "64 layers of dimensionally-nested supercomputers simulate the universe to our best understanding, along with other miniscule operations."
+ acot_th_precursor_science_nexus_2_MEGASTRUCTURE_DETAILS: "The Academy provides research speed and scientic resources."
+
+ acot_th_precursor_science_nexus_3: "Precursor Master Academy"
+ acot_th_precursor_science_nexus_3_DESC: "128 layers of dimensionally-nested supercomputers organize our empire's past down to individual minutes, rediscovered and sorted to where it belongs. Tragedies of lost knowledge are left in the past, so the future is open wide open."
+ acot_th_precursor_science_nexus_3_MEGASTRUCTURE_DETAILS: "The Academy provides research speed and scientic resources."
+
+ acot_th_precursor_science_nexus_alpha: "Precursor Alpha Academy"
+ acot_th_precursor_science_nexus_alpha_DESC: "256 layers of spacetime-nested alphic computers moderate technological development of the entire empire. Every question, thought even once, will eventually have an answer when our focus gets to it."
+ acot_th_precursor_science_nexus_alpha_MEGASTRUCTURE_DETAILS: "The Academy provides research speed and scientic resources."
+ 
+ acot_th_precursor_science_nexus_phanon: "Precursor Phanon Academy"
+ acot_th_precursor_science_nexus_phanon_DESC: "1024 layers of runic-planed thought evokers project intellect and knowledge across the empire, then gather it in one place to sort out and make use of. Time is an illusion, after all."
+ acot_th_precursor_science_nexus_3_MEGASTRUCTURE_DETAILS: "The Academy provides research speed and scientic resources."
+ 
+ acot_th_precursor_science_nexus_sigma: "Precursor Sigma Academy"
+ acot_th_precursor_science_nexus_sigma_DESC: "1e100 layers of core-layered stellar cogniters reshuffle the very concept of thought, knowledge and experience until it fits our demands better. Just like perfection, we can reach infinite information density for as long as we please."
+ acot_th_precursor_science_nexus_sigma_MEGASTRUCTURE_DETAILS: "The Academy provides research speed and scientic resources."
+ 
+ #acot_th_precursor_science_nexus_runic: "Precursor Runic Academy"
+ #acot_th_precursor_science_nexus_runic_DESC: "1e308 layers of recursively-nested hyper-compute machines siphon quantum bits of our Shroudmaster's infinite wisdom, neutered from eldrich effects with supertasks of precausion methods. Who's laughing now?"
+ #acot_th_precursor_science_nexus_runic_MEGASTRUCTURE_DETAILS: "The Academy provides research speed and scientic resources."
+
+ tech_th_precursor_nexus: "The Science"
+ tech_th_precursor_nexus_desc: "Blueprints secretly acquired from Delirium Lomus, He Who Steals Stuffs. Eggheads will like it."
+
+####
+
+ acot_th_precursor_strategy_center_portal: "Precursor Stronghold Dour Portal"
+ acot_th_precursor_strategy_center_portal_DESC: "With our new cutting-edge understanding of enigmatic warfare, Strategic Coordination Center is restructured from scratch with the similar purpose to follow precursors' optimized ways."
+ acot_th_precursor_strategy_center_portal_MEGASTRUCTURE_DETAILS: "Stronghold Dour provides enhanced military logistics compared to Strategic Coordination Center."
+
+ acot_th_precursor_strategy_center_1: "Precursor Stronghold Dour"
+ acot_th_precursor_strategy_center_1_DESC: "With our new cutting-edge understanding of enigmatic warfare, Strategic Coordination Center is restructured from scratch with the similar purpose to follow precursors' optimized ways."
+ acot_th_precursor_strategy_center_1_MEGASTRUCTURE_DETAILS: "Stronghold Dour provides enhanced military logistics compared to Strategic Coordination Center."
+
+ acot_th_precursor_strategy_center_2: "Precursor Greater Stronghold Dour"
+ acot_th_precursor_strategy_center_2_DESC: "Stronghold Dour, Structurally resembling amped-up giga fortress, provides both immaculate security and cutting-edge technology for unparalleled management."
+ acot_th_precursor_strategy_center_2_MEGASTRUCTURE_DETAILS: "Stronghold Dour provides enhanced military logistics compared to Strategic Coordination Center."
+ 
+ acot_th_precursor_strategy_center_3: "Precursor Master Stronghold Dour"
+ acot_th_precursor_strategy_center_3_DESC: "Simulation chambers do not just create digital copies of investigated object - they recreate it from hardlight into physical form. Maginot squared."
+ acot_th_precursor_strategy_center_3_MEGASTRUCTURE_DETAILS: "Stronghold Dour provides enhanced military logistics compared to Strategic Coordination Center."
+ 
+ acot_th_precursor_strategy_center_alpha: "Precursor Alpha Stronghold Dour"
+ acot_th_precursor_strategy_center_alpha_DESC: "Perfected delta tech has ensured all possible weak points in Stronghold Dour have been eliminated, providing both more room and resources for what is it's purpose - logistics. Now covering slight bit of planetary warfare."
+ acot_th_precursor_strategy_center_alpha_MEGASTRUCTURE_DETAILS: "Alpha Stronghold Dour provides enhanced military logistics compared to Precursor Stronghold Dour"
+
+ acot_th_precursor_strategy_center_phanon: "Precursor Phanon Stronghold Dour"
+ acot_th_precursor_strategy_center_phanon_DESC: "We have semi-successfully recreated the space-bending techniques used in Phanon Vault to recreate it's Infinite Corridors defensive structure...We can now train our troops without loosing them even better."
+ acot_th_precursor_strategy_center_phanon_MEGASTRUCTURE_DETAILS: "Phanon Stronghold Dour provides enhanced military logistics compared to Alpha Stronghold Dour"
+
+ acot_th_precursor_strategy_center_sigma: "Precursor Sigma Stronghold Dour"
+ acot_th_precursor_strategy_center_sigma_DESC: "Grand Stronghold Dour. In-sync with our fleets, armies, and giga fortresses across the entire emprie, constantly running training campaigns and supplying every aspect of military."
+ acot_th_precursor_strategy_center_sigma_MEGASTRUCTURE_DETAILS: "Sigma Stronghold Dour provides enhanced military logistics compared to Phanon Stronghold Dour"
+
+ #acot_th_precursor_strategy_center_runic: "Precursor Runic Stronghold Dour"
+ #acot_th_precursor_strategy_center_runic_DESC: "Shunning the primitive designs of the Strategic Center, yet understanding its practical applications, a similar structure made in the design aesthetics of the Precursors have been made with superior capabilities."
+ #acot_th_precursor_strategy_center_runic_MEGASTRUCTURE_DETAILS: "Stronghold Dour provides enhanced military logistics compared to Strategic Coordination Center."
+
+ tech_th_precursor_strategy_center: "The Stratagem"
+ tech_th_precursor_strategy_center_desc: "Blueprints secretly acquired from Delirium Lomus, He Who Steals Stuffs. They resemble a stone castle."
+
+####
+
+ acot_th_precursor_sentry_orb_portal: "Precursor Observatory Portal"
+ acot_th_precursor_sentry_orb_portal_DESC: "Recreation of Precursors' Sentry Array. Much like it's Fallen Empire analog, it provides enhanced telemetry for our fleets, along with slight increase in espionage capabilities."
+ acot_th_precursor_sentry_orb_portal_MEGASTRUCTURE_DETAILS: "The Observator provides sensors, range, tracking and accuracy buffs to ships as well as an increase in Encryption and Decryption capabilities."
+
+ acot_th_precursor_sentry_orb_stage_one: "Precursor Observatory"
+ acot_th_precursor_sentry_orb_stage_one_DESC: "Due to sensor ranges already being trivially high, the Observatory breaks away from the Sensor Array to act more as Espionage and Counter-Espionage System, as well as fleet sensors amplifier. It does lack the Sensor Array's full sensor coverage, however (Something that the Fallen Empires already have anyway)."
+ acot_th_precursor_sentry_orb_stage_one_MEGASTRUCTURE_DETAILS: "The Observator provides sensors, range, tracking and accuracy buffs to ships as well as an increase in Encryption and Decryption capabilities."
+
+ acot_th_precursor_sentry_orb_stage_two: "Precursor Greater Observatory"
+ acot_th_precursor_sentry_orb_stage_two_DESC: "Due to sensor ranges already being trivially high, the Observatory breaks away from the Sensor Array to act more as Espionage and Counter-Espionage System, as well as fleet sensors amplifier. It does lack the Sensor Array's full sensor coverage, however (Something that the Fallen Empires already have anyway)."
+ acot_th_precursor_sentry_orb_stage_two_MEGASTRUCTURE_DETAILS: "The Observator provides sensors, range, tracking and accuracy buffs to ships as well as an increase in Encryption and Decryption capabilities."
+
+ acot_th_precursor_sentry_orb_stage_three: "Precursor Master Observatory"
+ acot_th_precursor_sentry_orb_stage_three_DESC: "Due to sensor ranges already being trivially high, the Observatory breaks away from the Sensor Array to act more as Espionage and Counter-Espionage System, as well as fleet sensors and tracking amplifier. It does lack the Sensor Array's full sensor coverage, however (Something that the Fallen Empires already have anyway)."
+ acot_th_precursor_sentry_orb_stage_three_MEGASTRUCTURE_DETAILS: "The Observator provides sensors, range, tracking and accuracy buffs to ships as well as an increase in Encryption and Decryption capabilities."
+
+ acot_th_precursor_sentry_orb_stage_three: "Precursor Alpha Observatory"
+ acot_th_precursor_sentry_orb_stage_three_DESC: "Due to sensor ranges already being trivially high, the Observatory breaks away from the Sensor Array to act more as Espionage and Counter-Espionage System, as well as fleet sensors and tracking amplifier. It does lack the Sensor Array's full sensor coverage, however (Something that the Fallen Empires already have anyway)."
+ acot_th_precursor_sentry_orb_stage_three_MEGASTRUCTURE_DETAILS: "The Observator provides sensors, range, tracking and accuracy buffs to ships as well as an increase in Encryption and Decryption capabilities."
+
+ acot_th_precursor_sentry_orb_stage_three: "Precursor Phanpn Observatory"
+ acot_th_precursor_sentry_orb_stage_three_DESC: "Due to sensor ranges already being trivially high, the Observatory breaks away from the Sensor Array to act more as Espionage and Counter-Espionage System, as well as fleet sensors and tracking amplifier. It does lack the Sensor Array's full sensor coverage, however (Something that the Fallen Empires already have anyway)."
+ acot_th_precursor_sentry_orb_stage_three_MEGASTRUCTURE_DETAILS: "The Observator provides sensors, range, tracking and accuracy buffs to ships as well as an increase in Encryption and Decryption capabilities."
+
+ acot_th_precursor_sentry_orb_stage_three: "Precursor Sigma Observatory"
+ acot_th_precursor_sentry_orb_stage_three_DESC: "Due to sensor ranges already being trivially high, the Observatory breaks away from the Sensor Array to act more as Espionage and Counter-Espionage System, as well as fleet sensors and tracking amplifier. It does lack the Sensor Array's full sensor coverage, however (Something that the Fallen Empires already have anyway)."
+ acot_th_precursor_sentry_orb_stage_three_MEGASTRUCTURE_DETAILS: "The Observator provides sensors, range, tracking and accuracy buffs to ships as well as an increase in Encryption and Decryption capabilities."
+
+# acot_th_precursor_sentry_orb_stage_three: "Precursor Runic Observatory"
+# acot_th_precursor_sentry_orb_stage_three_DESC: "Due to sensor ranges already being trivially high, the Observatory breaks away from the Sensor Array to act more as Espionage and Counter-Espionage System, as well as fleet sensors and tracking amplifier. It does lack the Sensor Array's full sensor coverage, however (Something that the Fallen Empires already have anyway)."
+# acot_th_precursor_sentry_orb_stage_three_MEGASTRUCTURE_DETAILS: "The Observator provides sensors, range, tracking and accuracy buffs to ships as well as an increase in Encryption and Decryption capabilities."
+
+
+ tech_th_precursor_spyorb: "The Spy"
+ tech_th_precursor_spyorb_desc: "Blueprints secretly acquired from Delirium Lomus, He Who Steals Stuffs."
+
+####
+
+ acot_th_precursor_dyson_sphere_portal: "Precursor Enigmatic Sphere Portal"
+ acot_th_precursor_dyson_sphere_portal_DESC: "Although not particularly advanced or ground-breaking in nature, the Sphere is still a considerable step above a typical Dyson Sphere in terms of flexibility, as they do not block out the star itself. As a result, it can safety extract large amount of energy without rendering the system uninhabitable."
+ acot_th_precursor_dyson_sphere_portal_MEGASTRUCTURE_DETAILS: "The Sphere provides energy, lots of them."
+
+ acot_th_precursor_dyson_sphere_1: "Precursor Enigmatic Sphere"
+ acot_th_precursor_dyson_sphere_1_DESC: "Although not particularly advanced or ground-breaking in nature, the Sphere is still a considerable step above a typical Dyson Sphere in terms of flexibility, as they do not block out the star itself. As a result, it can safety extract large amount of energy without rendering the system uninhabitable."
+ acot_th_precursor_dyson_sphere_1_MEGASTRUCTURE_DETAILS: "The Sphere provides energy, lots of them."
+
+ acot_th_precursor_dyson_sphere_2: "Precursor Master Enigmatic Sphere"
+ acot_th_precursor_dyson_sphere_2_DESC: "Although not particularly advanced or ground-breaking in nature, the Sphere is still a considerable step above a typical Dyson Sphere in terms of flexibility, as they do not block out the star itself. As a result, it can safety extract large amount of energy without rendering the system uninhabitable."
+ acot_th_precursor_dyson_sphere_2_MEGASTRUCTURE_DETAILS: "The Sphere provides energy, lots of them."
+
+ tech_th_precursor_dyson_sphere: "The Cursed Kitbash"
+ tech_th_precursor_dyson_sphere_desc: "Blueprints secretly acquired from Delirium Lomus, He Who Steals Stuffs."
+
+####
+
+ acot_th_precursor_mega_shipyard_portal: "Precursor Dimensional Starforge Portal"
+ acot_th_precursor_mega_shipyard_portal_DESC: "Although the Fallen Empire have countless mothballed fleets ready to be reactivated at any time, they still keep this ancient megastructure around in cases of true emergency that demands their reawakening"
+ acot_th_precursor_mega_shipyard_portal_MEGASTRUCTURE_DETAILS: "The Shipyard build ships."
+
+ acot_th_precursor_mega_shipyard: "Precursor Dimensional Starforge"
+ acot_th_precursor_mega_shipyard_DESC: "Although the Fallen Empire have countless mothballed fleets ready to be reactivated at any time, they still keep this ancient megastructure around in cases of true emergency that demands their reawakening."
+ acot_th_precursor_mega_shipyard_MEGASTRUCTURE_DETAILS: "The Shipyard build ships."
+
+ tech_th_precursor_mega_shipyard: "The Megaman"
+ tech_th_precursor_mega_shipyard_desc: "Blueprints secretly acquired from Delirium Lomus, He Who Steals Stuffs."
+
+###
+
+ acot_th_ancient_gateway: "Precursor Star Relay"
+ acot_th_ancient_gateway_DESC: "Precursor Star Relays are more advanced gateways that provides speed boost to its owner's fleets that pass through."
+ acot_th_ancient_gateway_MEGASTRUCTURE_DETAILS: "Precursor Star Relays are more advanced gateways that provides speed boost to its owner's fleets that pass through."
+
+ tech_th_precursor_gateway: "Precursor Imitation - Gateways"
+ tech_th_precursor_gateway_desc: "Star Relays, in theory, could be merged with dimensional lock. Any fleet not belonging to us will be unable to pass through them."
+ 
+ 
+ 
+ 
+ th_mega_supertensile_0: "Spaghettifier construction base"
+ th_mega_supertensile_0_DESC: "Spaghettifier base"
+ th_mega_supertensile_0_MEGASTRUCTURE_DETAILS: "th_mega_supertensile_MEGASTRUCTURE"
+ th_mega_supertensile_1: "Spaghettifier cleanroom breweries"
+ th_mega_supertensile_1_DESC: "th_mega_supertensile_DESC"
+ th_mega_supertensile_1_MEGASTRUCTURE_DETAILS: "th_mega_supertensile_MEGASTRUCTURE"
+ th_mega_supertensile_2: "Spaghettifier"
+ th_mega_supertensile_2_DESC: "precision hemispheres"
+ th_mega_supertensile_2_MEGASTRUCTURE_DETAILS: "th_mega_supertensile_MEGASTRUCTURE"
+ th_mega_supertensile_3: "Spaghettifier"
+ th_mega_supertensile_3_DESC: "complete"
+ th_mega_supertensile_3_MEGASTRUCTURE_DETAILS: "th_mega_supertensile_MEGASTRUCTURE"
+ th_mega_supertensile_delta: "Spaghettifier - Delta purifiers"
+ th_mega_supertensile_delta_DESC: "Dark matter refining domes will allow to purify the supertensiles to the point they are mathematically perfect. Megastructural bureau ensures of it."
+ th_mega_supertensile_delta_MEGASTRUCTURE_DETAILS: "th_mega_supertensile_MEGASTRUCTURE"
+ th_mega_supertensile_alpha: "Spaghettifier - Alpha calibration"
+ th_mega_supertensile_alpha_DESC: "Alpha experiments' ways of engineering - specifically capital ships and starbases - shed light onto how to apply precursor methods onto megastructures at large. Spaghettifier shall be the first of many to achieve true greatness among the stars, and lead our other projects to it."
+ th_mega_supertensile_alpha_MEGASTRUCTURE_DETAILS: "th_mega_supertensile_MEGASTRUCTURE"
+ 
+ 
+ 
+ 
+ 
+ 
+ gateway_too_primitive: "This gateway's enigmatic design is too sophisticated for us to tackle."
+ gateway_locked: "This gateway somehow prevents passage to us."

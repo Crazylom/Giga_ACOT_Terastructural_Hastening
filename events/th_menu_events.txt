@@ -1,0 +1,74 @@
+#The Menu for values
+namespace = th_menu
+
+# country_event = {
+#	id = th_menu.1
+#	title = "th_menu.1.name"
+#	desc = "th_menu.1.desc"
+#	picture = GFX_evt_th_giga_wallace
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#	}
+	
+	#########################################################
+	################# Buildings cost mult ###################
+	#########################################################
+	
+	
+	# Max 1 modifier
+#	option = {
+#		trigger = {
+#			has_global_flag = gpm_modifier_amount_max_one
+#		}
+#		name = th_menu.1.one
+#		custom_tooltip = gpm_start_menu.1.max_oneTT
+#		set_global_flag = gpm_modifier_amount_low
+#		remove_global_flag = gpm_modifier_amount_max_one
+#		hidden_effect = {
+#			country_event = { id = gpm_start_menu.1  }
+#		}
+#	}
+
+	# below average amount of cost
+#	option = {
+#		trigger = {
+#			has_global_flag = th_building_costs_normal
+#		}
+#		name = th_menu.1.normal
+#		custom_tooltip = th_menu.1.normalTT
+#		set_global_flag = th_building_costs_high
+#		remove_global_flag = th_building_costs_normal
+#		hidden_effect = {
+#			country_event = { id = gpm_start_menu.1  }
+#		}
+#	}
+
+	# normal amount of modifiers (recomended)
+#	option = {
+#		trigger = {
+#			has_global_flag = th_building_costs_normal
+#		}
+#		name = th_menu.1.normal
+#		custom_tooltip = th_menu.1.normalTT
+#		set_global_flag = th_building_costs_high
+#		remove_global_flag = th_building_costs_normal
+#		hidden_effect = {
+#			country_event = { id = gpm_start_menu.1  }
+#		}
+#	}
+
+	# high amount of modifiers
+#	option = {
+#		trigger = {
+#			has_global_flag = gpm_modifier_amount_high
+#		}
+#		name = gpm_start_menu.1.high
+#		custom_tooltip = gpm_start_menu.1.highTT
+#		set_global_flag = gpm_modifier_amount_max_one
+#		remove_global_flag = gpm_modifier_amount_high
+#		hidden_effect = {
+#			country_event = { id = gpm_start_menu.1  }
+#		}
+#	}
+#}

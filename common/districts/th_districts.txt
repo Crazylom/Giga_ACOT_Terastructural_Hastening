@@ -1,0 +1,558 @@
+# Variables used below
+@acot_cost = 420
+@acot_cost2 = 800
+@acot_upkeep = 30
+@acot_upkeep2 = 10
+
+@base_cost = 300
+@city_cost = 500
+@advanced_cost = 1000
+@advanced_rare_cost = 50
+@advanced_double_cost = 2000
+@advanced_double_rare_cost = 100
+@mega_cost = 2000
+@mega_alloy_cost = 500
+@mega_rare_cost = 250
+
+@base_upkeep = 1
+@city_upkeep = 2
+@advanced_upkeep = 5
+@advanced_rare_upkeep = 1
+@advanced_double_upkeep = 10
+@advanced_double_rare_upkeep = 2
+@mega_upkeep = 20
+@mega_alloy_upkeep = 5
+@mega_rare_upkeep = 5
+
+@base_time = 240
+@city_time = 480
+@advanced_time = 720
+@mega_time = 960
+
+# Here comes...
+# ANZ Voidframe compat
+# Modified to include big jobs
+
+# Delta tensiles
+district_th_frameworld_dm = {
+	base_buildtime = @advanced_time
+	is_capped_by_modifier = no
+	
+	prerequisites = {
+		tech_dm_giga_ass
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_frameworld
+		has_global_flag = anz_voidframe_installed
+	}
+	
+	show_on_uncolonized = {
+		has_global_flag = @giga_amb_flag
+		has_global_flag = anz_voidframe_installed
+		exists = from
+		from = {
+			has_technology = giga_tech_amb_supertensiles_acot_delta
+		}
+		uses_district_set = giga_frameworld
+	}
+	
+	potential = {
+		has_global_flag = @giga_amb_flag
+		has_global_flag = anz_voidframe_installed
+		exists = owner
+		owner = {
+			has_technology = giga_tech_amb_supertensiles_acot_delta
+		}
+		uses_district_set = giga_frameworld
+        is_voidframe_exclusive_dm = yes
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_th_frameworld_de
+	}
+	
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			alloys = @base_cost
+			sr_dark_matter = @advanced_rare_cost
+			acot_sr_dark_energy = @advanced_rare_cost
+		}
+		upkeep = {
+			energy = @advanced_upkeep
+		}
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_th_gigaseer_delta_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_th_gigadrone_delta_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_th_gigaseer_delta_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_th_gigadrone_delta_effect_desc
+	}
+	
+	ai_resource_production = {
+		giga_sr_amb_megaconstruction = 20
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# Alpha tensiles
+district_th_frameworld_de = {
+	base_buildtime = @advanced_time
+	is_capped_by_modifier = no
+	
+	prerequisites = {
+		tech_ae_tera_hampter
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_frameworld
+		has_global_flag = anz_voidframe_installed
+	}
+	
+	show_on_uncolonized = {
+		has_global_flag = @giga_amb_flag
+		has_global_flag = anz_voidframe_installed
+		exists = from
+		from = {
+			has_technology = giga_tech_amb_supertensiles_acot_alpha
+		}
+		uses_district_set = giga_frameworld
+	}
+	
+	potential = {
+		has_global_flag = @giga_amb_flag
+		has_global_flag = anz_voidframe_installed
+		exists = owner
+		owner = {
+			has_technology = giga_tech_amb_supertensiles_acot_alpha
+		}
+		uses_district_set = giga_frameworld
+        is_voidframe_exclusive_de = yes
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_th_frameworld_pe
+	}
+	
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			alloys = @city_cost
+			sr_dark_matter = 125
+			acot_sr_dark_energy = 125
+		}
+		upkeep = {
+			energy = @advanced_upkeep
+		}
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_th_gigaseer_alpha_add = 2 
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_th_gigadrone_alpha_add = 2 
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_th_gigaseer_alpha_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_th_gigadrone_alpha_effect_desc
+	}
+	
+	ai_resource_production = {
+		giga_sr_amb_megaconstruction = 60
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# Phanon tensiles
+district_th_frameworld_pe = {
+	base_buildtime = @advanced_time
+	is_capped_by_modifier = no
+	
+	prerequisites = {
+		tech_phanon_meatballs
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_frameworld
+		has_global_flag = anz_voidframe_installed
+	}
+	
+	show_on_uncolonized = {
+		has_global_flag = @giga_amb_flag
+		has_global_flag = anz_voidframe_installed
+		exists = from
+		from = {
+			has_technology = giga_tech_amb_supertensiles_acot_phanon
+		}
+		uses_district_set = giga_frameworld
+	}
+	
+	potential = {
+		has_global_flag = @giga_amb_flag
+		has_global_flag = anz_voidframe_installed
+		exists = owner
+		owner = {
+			has_technology = giga_tech_amb_supertensiles_acot_phanon
+		}
+		uses_district_set = giga_frameworld
+        is_voidframe_exclusive_pe = yes
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_th_frameworld_se
+	}
+	
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			alloys = @acot_cost2
+			aot_sr_runic_power = 500
+		}
+		upkeep = {
+			aot_sr_runic_power = @advanced_upkeep
+		}
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_th_gigaseer_phanon_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_th_gigadrone_phanon_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_th_gigaseer_phanon_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_th_gigadrone_phanon_effect_desc
+	}
+	
+	ai_resource_production = {
+		giga_sr_amb_megaconstruction = 150
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# Sigma tensiles
+district_th_frameworld_se = {
+	base_buildtime = @advanced_time
+	is_capped_by_modifier = no
+	
+	prerequisites = {
+		tech_stellarite_big_cheez
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_frameworld
+		has_global_flag = anz_voidframe_installed
+	}
+	
+	show_on_uncolonized = {
+		has_global_flag = @giga_amb_flag
+		has_global_flag = anz_voidframe_installed
+		exists = from
+		from = {
+			has_technology = giga_tech_amb_supertensiles_acot_sigma
+		}
+		uses_district_set = giga_frameworld
+	}
+	
+	potential = {
+		has_global_flag = @giga_amb_flag
+		has_global_flag = anz_voidframe_installed
+		exists = owner
+		owner = {
+			has_technology = giga_tech_amb_supertensiles_acot_sigma
+		}
+		uses_district_set = giga_frameworld
+        is_voidframe_exclusive_se = yes
+	}
+	
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			alloys = @advanced_cost
+			acot_sr_stellarite = 500
+		}
+		upkeep = {
+			acot_sr_stellarite = @advanced_upkeep
+		}
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_th_gigaseer_sigma_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_th_gigadrone_sigma_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_th_gigaseer_sigma_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_th_gigadrone_sigma_effect_desc
+	}
+	
+	ai_resource_production = {
+		giga_sr_amb_megaconstruction = 300
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# And now...
+# Experimental Ringworld districts
+# Eugh...
+
+district_rw_supertensile = {
+	base_buildtime = @rw_district_buildtime
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		AND = {
+			uses_district_set = ring_world
+			NOT = {
+				is_planet_class = pc_ringworld_city
+			}
+		}
+	}
+
+	potential = {
+		has_global_flag = @giga_amb_flag
+		is_fallen_empire = no
+		AND = {
+			uses_district_set = ring_world
+			NOT = {
+				is_planet_class = pc_ringworld_city
+			}
+		}
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @rw_cost
+			volatile_motes = 400
+			exotic_gases = 400
+			rare_crystals = 400
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+	
+	triggered_planet_modifier = {
+		planet_housing_add = 10
+		country_resource_max_giga_sr_amb_megaconstruction_add = 10000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_giga_megaengineering_overseer_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_giga_megaengineering_overseer_drone_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 2
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		text = "job_giga_megaengineering_overseer_effect_desc"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = "job_giga_megaengineering_overseer_drone_effect_desc"
+	}

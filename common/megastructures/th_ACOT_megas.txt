@@ -1,0 +1,2517 @@
+################################## Gateway
+acot_th_precursor_gateway = {
+	entity = "precursor_gateway_entity"
+	construction_entity = "acot_precusor_orbital_ring_construction_entity"
+	portrait = "GFX_acot_precursor_portal_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes 
+	
+	prerequisites = {
+		tech_th_precursor_gateway
+	}
+
+	show_galactic_map_icon = no
+	potential = {
+		always = no
+	}
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			OR = {
+				is_inside_border = from
+				solar_system = {
+					owner = {
+						OR = {
+							has_defensive_pact = from
+							is_in_federation_with = from
+							AND = {
+								is_subject = yes
+								FROM = {
+									is_overlord_to = prev
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_gateway"
+			NOR = {
+				has_megastructure = gateway_0
+				has_megastructure = gateway_ruined
+				has_megastructure = gateway_restored
+				has_megastructure = gateway_final
+				has_megastructure = acot_ancient_gateway
+				has_megastructure = acot_th_precursor_gateway
+				has_megastructure = acot_th_precursor_gateway_alpha
+				has_megastructure = acot_th_precursor_gateway_phanon
+				has_megastructure = acot_th_precursor_gateway_sigma
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_technology_gateway_construction"
+			from = { has_technology = tech_gateway_construction }
+		}
+	}
+
+	placement_rules = {			# those would be ignored since the gateway is being "free-placed" between the inner and outer radius of the system
+	}
+
+#	upgrade_from = {
+#		#gateway_0
+#	}
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 10000
+			sr_dark_matter = 2500
+			acot_sr_dark_energy = 2500
+			influence = 100
+		}
+	}
+
+	construction_blocks_others = no
+
+	ai_weight = {
+		factor = 0 # Sanity
+		
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}
+
+		modifier = {
+			factor = 0
+			any_neighbor_system = { 
+				OR = {
+					has_megastructure = gateway_0
+					has_megastructure = gateway_ruined
+					has_megastructure = gateway_restored
+					has_megastructure = gateway_final
+					has_megastructure = acot_ancient_gateway
+					has_megastructure = acot_th_precursor_gateway_delta
+					has_megastructure = acot_th_precursor_gateway_alpha
+					has_megastructure = acot_th_precursor_gateway_phanon
+					has_megastructure = acot_th_precursor_gateway_sigma
+				}
+			}
+		}		
+	}
+
+	bypass_type = th_precursor_gateway_net
+	on_build_complete = {
+		activate_gateway = fromfrom
+		fromfrom = { 
+			set_variable = { which = gate_owner value = gate_user }
+		}
+	}
+}
+
+
+################################## Think tank
+acot_th_precursor_science_nexus_portal = {
+	entity = "precursor_dark_obelisk_construction_portal_entity"
+	construction_entity = "precursor_dark_obelisk_construction_portal_entity"
+	portrait = "GFX_acot_precursor_nexus_background"
+
+	prerequisites = {
+		tech_th_precursor_nexus
+	}
+
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -20 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	possible = {
+		hidden_trigger = {
+			exists = starbase
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_similar_mega"
+			NOR = { # No stacking with OG precursor designs
+				has_megastructure = acot_precursor_science_nexus_portal
+				has_megastructure = acot_precursor_science_nexus_stage_one
+				has_megastructure = acot_precursor_science_nexus_stage_two
+				has_megastructure = acot_precursor_science_nexus_stage_three
+			}
+		}
+		custom_tooltip = { fail_text = "requires_inside_border"						is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+		custom_tooltip = {	
+			fail_text = "requires_not_capped"
+			from = {
+				OR = {
+					check_variable = { which = giga_vanilla_nexus_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_nexus value < giga_vanilla_nexus_cap }
+				}
+			}
+		}		
+	}
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = { fail_text = "requires_survey_not_habitable"		is_surveyed = { who = prev.from status = yes } is_planet_habitable = no }
+			custom_tooltip = { fail_text = "requires_no_anomaly"				has_anomaly = no }
+			custom_tooltip = { fail_text = "requires_no_existing_megastructure"	planet_has_no_megastructure = yes }
+			custom_tooltip = { fail_text = "requires_not_star"					is_star = no }
+			custom_tooltip = { fail_text = "requires_not_astral_scar"			is_astral_scar = no	}
+			custom_tooltip = { fail_text = "requires_not_ring_world"			is_ringworld = no }
+		}
+	}
+		
+	country_modifier = {
+	}
+
+	construction_blocks_and_blocked_by = self_type
+
+	build_time = 1
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+		modifier = {
+			factor = 0
+			NOR = {
+				starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+				any_system_planet = {
+					exists = owner
+					is_owned_by = from 
+				}
+			}
+		}	
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				NOT = { 
+					is_owned_by = from 
+				}
+			}
+		}		
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+		fromfrom = {
+			upgrade_megastructure_to = acot_precursor_science_nexus_stage_one
+		}
+	}
+}
+
+acot_th_precursor_science_nexus_1 = {
+	entity = "acot_precursor_nexus_stage_1_entity"
+	construction_entity = "acot_precursor_nexus_stage_1_entity"
+	portrait = "GFX_acot_precursor_nexus_background"
+
+	prerequisites = {
+		tech_th_precursor_nexus
+	}
+
+	upgrade_from = {
+		acot_th_precursor_science_nexus_portal
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.05
+	}
+
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 30000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+			energy = 20
+			alloys = 20
+			minor_artifacts = 1 # Stockpiling
+		}
+		produces = {
+			society_research = 130
+			engineering_research = 130
+			physics_research = 130
+		}
+	}
+
+	ai_weight = {
+		factor = 0	# Sanity
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_science_nexus_2 = {
+	entity = "acot_precursor_nexus_stage_2_entity"
+	construction_entity = "acot_precursor_nexus_stage_2_entity"
+	portrait = "GFX_acot_precursor_nexus_background"
+
+	prerequisites = {
+		tech_th_precursor_nexus
+	}
+
+	upgrade_from = {
+		acot_th_precursor_science_nexus_1
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.1
+	}
+
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 30000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+			energy = 40
+			alloys = 40
+			minor_artifacts = 2 # Researching
+		}
+		produces = {
+			society_research = 260
+			engineering_research = 260
+			physics_research = 260
+		}
+	}
+
+	ai_weight = {
+		factor = 0	# Sanity
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_science_nexus_3 = {
+	entity = "acot_precursor_nexus_stage_3_entity"
+	construction_entity = "acot_precursor_nexus_stage_3_entity"
+	portrait = "GFX_acot_precursor_nexus_background"
+
+	prerequisites = {
+		tech_th_precursor_nexus
+	}
+
+	upgrade_from = {
+		acot_th_precursor_science_nexus_2
+		think_tank_3
+		think_tank_4
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.2
+	}
+
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 30000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+			energy = 80
+			alloys = 10
+		}
+		produces = {
+			society_research = 400
+			engineering_research = 400
+			physics_research = 400
+			minor_artifacts = 1 # Producing
+		}
+	}
+
+	ai_weight = {
+		factor = 0 # Sanity 
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_science_nexus_alpha = {
+	entity = "acot_precursor_nexus_stage_3_entity"
+	construction_entity = "acot_precursor_nexus_stage_3_entity"
+	portrait = "GFX_acot_precursor_nexus_background"
+
+	prerequisites = {
+		tech_th_precursor_nexus
+		tech_precursor_science
+	}
+
+	upgrade_from = {
+		acot_th_precursor_science_nexus_3
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.3
+		physics_tech_cost_mult = -0.01
+		society_tech_cost_mult = -0.01
+		engineering_tech_cost_mult = -0.01
+	}
+
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 30000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+			energy = 80
+			alloys = 10
+		}
+		produces = {
+			society_research = 600
+			engineering_research = 600
+			physics_research = 600
+			minor_artifacts = 2 # Producing
+		}
+	}
+
+	ai_weight = {
+		factor = 0 # Sanity 
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_science_nexus_phanon = {
+	entity = "acot_precursor_nexus_stage_3_entity"
+	construction_entity = "acot_precursor_nexus_stage_3_entity"
+	portrait = "GFX_acot_precursor_nexus_background"
+
+	prerequisites = {
+		tech_th_precursor_nexus
+		tech_precursor_science
+		tech_precursor_phanon_design
+	}
+
+	upgrade_from = {
+		acot_th_precursor_science_nexus_alpha
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.5
+		physics_tech_cost_mult = -0.02
+		society_tech_cost_mult = -0.02
+		engineering_tech_cost_mult = -0.02
+	}
+
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 40000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+			aot_sr_runic_energy = 10000
+		}
+		upkeep = {
+			energy = 80
+			alloys = 10
+		}
+		produces = {
+			society_research = 1200
+			engineering_research = 1200
+			physics_research = 1200
+			minor_artifacts = 3 # Producing
+		}
+	}
+
+	ai_weight = {
+		factor = 0 # Sanity 
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_science_nexus_sigma = {
+	entity = "acot_precursor_nexus_stage_3_entity"
+	construction_entity = "acot_precursor_nexus_stage_3_entity"
+	portrait = "GFX_acot_precursor_nexus_background"
+
+	prerequisites = {
+		tech_th_precursor_nexus
+		tech_precursor_science
+		tech_dark_matter_power_core_se
+	}
+
+	upgrade_from = {
+		acot_th_precursor_science_nexus_phanon
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 1
+		physics_tech_cost_mult = -0.05
+		society_tech_cost_mult = -0.05
+		engineering_tech_cost_mult = -0.05
+	}
+
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 100000
+			sr_dark_matter = 10000
+			acot_sr_dark_energy = 10000
+			acot_sr_stellarite = 20000
+		}
+		upkeep = {
+			energy = 80
+			alloys = 10
+		}
+		produces = {
+			society_research = 1200
+			engineering_research = 1200
+			physics_research = 1200
+			minor_artifacts = 3 # Producing
+		}
+	}
+
+	ai_weight = {
+		factor = 0 # Sanity 
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+################################## RTS MEGA
+acot_th_precursor_strategy_center_portal = {
+	entity = "precursor_dark_obelisk_construction_portal_entity"
+	construction_entity = "precursor_dark_obelisk_construction_portal_entity"
+	portrait = "GFX_acot_precursor_strategy_background"
+
+	prerequisites = {
+		tech_th_precursor_strategy_center
+	}
+
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -20 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+
+	possible = {
+		hidden_trigger = {
+			exists = starbase
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_similar_mega"
+			NOR = { # No stacking with OG precursor designs
+				has_megastructure = acot_precursor_strategy_center_portal
+				has_megastructure = acot_precursor_strategy_center_stage_one
+				has_megastructure = acot_precursor_strategy_center_stage_two
+				has_megastructure = acot_precursor_strategy_center_stage_three
+			}
+		}
+		custom_tooltip = { fail_text = "requires_inside_border"								is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"							giga_system_is_surveyed = yes }
+		custom_tooltip = {
+			fail_text = "requires_not_capped"
+			from = {
+				OR = {
+					check_variable = { which = giga_vanilla_strategic_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_strategic value < giga_vanilla_strategic_cap }
+				}
+			}
+		}
+	}
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = { fail_text = "requires_survey_not_habitable"		is_surveyed = { who = prev.from status = yes } is_planet_habitable = no }
+			custom_tooltip = { fail_text = "requires_no_anomaly"				has_anomaly = no }
+			custom_tooltip = { fail_text = "requires_not_minor_planetary_body"	is_asteroid = no is_moon = no }
+			custom_tooltip = { fail_text = "requires_no_existing_megastructure"	planet_has_no_megastructure = yes }
+			custom_tooltip = { fail_text = "requires_not_star"					is_star = no }
+			custom_tooltip = { fail_text = "requires_not_astral_scar"			is_astral_scar = no	}
+			custom_tooltip = { fail_text = "requires_not_ring_world"			is_ringworld = no }
+		}
+	}
+	
+	country_modifier = {
+	}
+
+	construction_blocks_and_blocked_by = self_type
+
+	build_time = 1
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 0 # Sanity
+		modifier = {
+			factor = 0
+			NOR = {
+				starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+				any_system_planet = {
+					exists = owner
+					is_owned_by = from 
+				}
+			}
+		}	
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				NOT = { 
+					is_owned_by = from 
+				}
+			}
+		}		
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+		fromfrom = {
+			upgrade_megastructure_to = acot_precursor_strategy_center_stage_one
+		}
+	}
+}
+
+acot_th_precursor_strategy_center_1 = {
+	entity = "acot_precursor_strategic_coordination_center_stage_1_entity"
+	construction_entity = "acot_precursor_strategic_coordination_center_stage_1_entity"
+	portrait = "GFX_acot_precursor_strategy_background"
+
+	prerequisites = {
+		tech_th_precursor_strategy_center
+	}
+
+	upgrade_from = {
+		acot_th_precursor_strategy_center_portal
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 100
+		country_starbase_capacity_add = 4
+		starbase_defense_platform_capacity_add = 8
+		ship_speed_mult = 0.15
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+			energy = 20
+			unity = 25
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_strategy_center_2 = {
+	entity = "acot_precursor_strategic_coordination_center_stage_2_entity"
+	construction_entity = "acot_precursor_strategic_coordination_center_stage_2_entity"
+	portrait = "GFX_acot_precursor_strategy_background"
+
+	prerequisites = {
+		tech_th_precursor_strategy_center
+	}
+
+	upgrade_from = {
+		acot_th_precursor_strategy_center_1
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 150
+		country_starbase_capacity_add = 6
+		starbase_defense_platform_capacity_add = 11
+		ship_speed_mult = 0.20
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+			energy = 45
+			unity = 150
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_strategy_center_3 = {
+	entity = "acot_precursor_strategic_coordination_center_stage_3_entity"
+	construction_entity = "acot_precursor_strategic_coordination_center_stage_3_entity"
+	portrait = "GFX_acot_precursor_strategy_background"
+
+	prerequisites = {
+		tech_th_precursor_strategy_center
+	}
+
+	upgrade_from = {
+		acot_th_precursor_strategy_center_2
+		strategic_coordination_center_3
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 200
+		country_starbase_capacity_add = 8
+		starbase_defense_platform_capacity_add = 14
+		ship_speed_mult = 0.25
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+			energy = 75
+			sr_dark_matter = 20
+			acot_sr_dark_energy = 20
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_strategy_center_alpha = {
+	entity = "acot_precursor_strategic_coordination_center_stage_3_entity"
+	construction_entity = "acot_precursor_strategic_coordination_center_stage_3_entity"
+	portrait = "GFX_acot_precursor_strategy_background"
+
+	prerequisites = {
+		tech_th_precursor_strategy_center
+		tech_dark_matter_power_core_ae
+	}
+
+	upgrade_from = {
+		acot_th_precursor_strategy_center_3
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 500
+		country_starbase_capacity_add = 12
+		starbase_defense_platform_capacity_add = 20
+		ship_speed_mult = 0.50
+		army_starting_experience_add = 100
+		army_disengage_chance_mult = 0.1
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		upkeep = {
+			energy = 150
+			sr_dark_matter = 50
+			acot_sr_dark_energy = 50
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_strategy_center_phanon = {
+	entity = "acot_precursor_strategic_coordination_center_stage_3_entity"
+	construction_entity = "acot_precursor_strategic_coordination_center_stage_3_entity"
+	portrait = "GFX_acot_precursor_strategy_background"
+
+	prerequisites = {
+		tech_th_precursor_strategy_center
+		tech_precursor_phanon_design
+	}
+
+	upgrade_from = {
+		acot_th_precursor_strategy_center_alpha
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 1000
+		country_starbase_capacity_add = 20
+		starbase_defense_platform_capacity_add = 50
+		ship_speed_mult = 1
+		army_starting_experience_add = 250
+		army_disengage_chance_mult = 0.25
+		army_experience_gain_mult = 0.25
+		command_limit_mult = 0.1
+		fleet_mia_time_mult = -0.15
+
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		upkeep = {
+		energy = 400
+		aot_sr_runic_energy = 200
+		}
+		produces = {
+			unity = 200
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_strategy_center_sigma = {
+	entity = "acot_precursor_strategic_coordination_center_stage_3_entity"
+	construction_entity = "acot_precursor_strategic_coordination_center_stage_3_entity"
+	portrait = "GFX_acot_precursor_strategy_background"
+
+	prerequisites = {
+		tech_th_precursor_strategy_center
+		tech_dark_matter_power_core_se
+	}
+
+	upgrade_from = {
+		acot_th_precursor_strategy_center_phanon
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 2000
+		country_starbase_capacity_add = 50
+		starbase_defense_platform_capacity_add = 100
+		ship_speed_mult = 2
+		command_limit_mult = 0.1
+		fleet_mia_time_mult = -0.4
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		upkeep = {
+		energy = 1000
+		acot_sr_stellarite = 1000
+		}
+		produces = {
+			unity = 500
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+################################## SENTRY
+acot_th_precursor_sentry_orb_portal = {
+	entity = "precursor_dark_obelisk_construction_portal_entity"
+	construction_entity = "precursor_dark_obelisk_construction_portal_entity"
+	portrait = "GFX_acot_precursor_spy_orb_background"
+
+	prerequisites = {
+		tech_th_precursor_spyorb
+	}
+
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -20 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+
+	possible = {
+		hidden_trigger = {
+			exists = starbase
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_similar_mega"
+			NOR = { # No stacking with OG precursor designs
+				has_megastructure = acot_precursor_sentry_orb_portal
+				has_megastructure = acot_precursor_sentry_orb_stage_one
+				has_megastructure = acot_precursor_sentry_orb_stage_two
+				has_megastructure = acot_precursor_sentry_orb_stage_three
+				has_megastructure = acot_th_precursor_sentry_orb_portal
+				has_megastructure = acot_th_precursor_sentry_orb_1
+				has_megastructure = acot_th_precursor_sentry_orb_2
+				has_megastructure = acot_th_precursor_sentry_orb_3
+			}
+		}
+		custom_tooltip = { fail_text = "requires_inside_border"					is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"				giga_system_is_surveyed = yes }
+		custom_tooltip = {
+			fail_text = "requires_not_capped"
+			from = {
+				OR = {
+					check_variable = { which = giga_vanilla_array_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_array value < giga_vanilla_array_cap }
+				}
+			}
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = { fail_text = "requires_survey_not_habitable"		is_surveyed = { who = prev.from status = yes } is_planet_habitable = no }
+			custom_tooltip = { fail_text = "requires_no_anomaly"				has_anomaly = no }
+			custom_tooltip = { fail_text = "requires_not_minor_planetary_body"	is_asteroid = no is_moon = no }
+			custom_tooltip = { fail_text = "requires_no_existing_megastructure"	planet_has_no_megastructure = yes }
+			custom_tooltip = { fail_text = "requires_not_star"					is_star = no }
+			custom_tooltip = { fail_text = "requires_not_astral_scar"			is_astral_scar = no	}
+			custom_tooltip = { fail_text = "requires_not_ring_world"			is_ringworld = no }
+		}
+	}
+	
+	country_modifier = {
+	}
+
+	construction_blocks_and_blocked_by = self_type
+
+	build_time = 1
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 0 # Sanity
+		modifier = {
+			factor = 0
+			NOR = {
+				starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+				any_system_planet = {
+					exists = owner
+					is_owned_by = from 
+				}
+			}
+		}	
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				NOT = { 
+					is_owned_by = from 
+				}
+			}
+		}		
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+		fromfrom = {
+			upgrade_megastructure_to = acot_precursor_sentry_orb_stage_one
+		}
+	}
+}
+
+acot_th_precursor_sentry_orb_1 = {
+	entity = "acot_precursor_spyorb_phase_02_entity"
+	construction_entity = "acot_precursor_spyorb_phase_02_entity"
+	portrait = "GFX_acot_precursor_spy_orb_background"
+
+	prerequisites = {
+		tech_th_precursor_spyorb
+	}
+
+	upgrade_from = {
+		acot_th_precursor_sentry_orb_portal
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		ship_sensor_range_add = 4
+		ship_hyperlane_range_add = 10
+		add_base_country_intel = 15
+		ship_tracking_mult = 0.10
+		ship_accuracy_mult = 0.10
+		ship_weapon_range_mult = 0.10
+		intel_encryption_add = 1
+		intel_decryption_add = 1
+	}
+
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+		sr_dark_matter = 10
+		acot_sr_dark_energy = 10
+		energy = 20
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_sentry_orb_2 = {
+	entity = "acot_precursor_spyorb_phase_03_entity"
+	construction_entity = "acot_precursor_spyorb_phase_03_entity"
+	portrait = "GFX_acot_precursor_spy_orb_background"
+
+	prerequisites = {
+		tech_th_precursor_spyorb
+	}
+
+	upgrade_from = {
+		acot_th_precursor_sentry_orb_1
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		ship_sensor_range_add = 8
+		ship_hyperlane_range_add = 15
+		add_base_country_intel = 35
+		ship_tracking_mult = 0.15
+		ship_accuracy_mult = 0.15
+		ship_weapon_range_mult = 0.15
+		intel_encryption_add = 2
+		intel_decryption_add = 2
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+		sr_dark_matter = 25
+		acot_sr_dark_energy = 25
+		energy = 50
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_sentry_orb_3 = {
+	entity = "acot_precursor_spyorb_phase_04_entity"
+	construction_entity = "acot_precursor_spyorb_phase_04_entity"
+	portrait = "GFX_acot_precursor_spy_orb_background"
+
+	prerequisites = {
+		tech_th_precursor_spyorb
+	}
+
+	upgrade_from = {
+		acot_th_precursor_sentry_orb_2
+		spy_orb_4
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		ship_sensor_range_add = 15
+		ship_hyperlane_range_add = 20
+		add_base_country_intel = 50
+		ship_tracking_mult = 0.30
+		ship_accuracy_mult = 0.30
+		ship_weapon_range_mult = 0.30
+		intel_encryption_add = 4
+		intel_decryption_add = 4
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+		sr_dark_matter = 40
+		acot_sr_dark_energy = 40
+		energy = 80
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_sentry_orb_alpha = {
+	entity = "acot_precursor_spyorb_phase_04_entity"
+	construction_entity = "acot_precursor_spyorb_phase_04_entity"
+	portrait = "GFX_acot_precursor_spy_orb_background"
+
+	prerequisites = {
+		tech_th_precursor_spyorb
+	}
+
+	upgrade_from = {
+		acot_th_precursor_sentry_orb_3
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		ship_sensor_range_add = 30
+		ship_hyperlane_range_add = 50
+		add_base_country_intel = 100
+		ship_tracking_mult = 0.50
+		ship_accuracy_mult = 0.50
+		ship_weapon_range_mult = 0.50
+		intel_encryption_add = 6
+		intel_decryption_add = 6
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 40000
+			sr_dark_matter = 5000
+			acot_sr_dark_energy = 5000
+		}
+		upkeep = {
+		sr_dark_matter = 100
+		acot_sr_dark_energy = 100
+		energy = 200
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_sentry_orb_phanon = {
+	entity = "acot_precursor_spyorb_phase_04_entity"
+	construction_entity = "acot_precursor_spyorb_phase_04_entity"
+	portrait = "GFX_acot_precursor_spy_orb_background"
+
+	prerequisites = {
+		tech_th_precursor_spyorb
+		tech_precursor_phanon_design
+	}
+
+	upgrade_from = {
+		acot_th_precursor_sentry_orb_alpha
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		ship_sensor_range_add = 50
+		ship_hyperlane_range_add = 80
+		add_base_country_intel = 150
+		ship_tracking_mult = 0.80
+		ship_accuracy_mult = 0.80
+		ship_weapon_range_mult = 0.80
+		intel_encryption_add = 10
+		intel_decryption_add = 10
+		fleet_mia_time_mult = -0.4
+		ship_jumpdrive_cooldown_mult = -0.2
+		ship_winddown_mult = 0.1
+		ship_windup_mult = 0.1
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 40000
+			sr_dark_matter = 5000
+			acot_sr_dark_energy = 5000
+		}
+		upkeep = {
+		energy = 800
+		aot_sr_runic_energy = 400
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_sentry_orb_sigma = {
+	entity = "acot_precursor_spyorb_phase_04_entity"
+	construction_entity = "acot_precursor_spyorb_phase_04_entity"
+	portrait = "GFX_acot_precursor_spy_orb_background"
+
+	prerequisites = {
+		tech_th_precursor_spyorb
+		tech_dark_matter_power_core_se
+	}
+
+	upgrade_from = {
+		acot_th_precursor_sentry_orb_phanon
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 0 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+		ship_sensor_range_add = 60
+		ship_hyperlane_range_add = 100
+		add_base_country_intel = 200
+		ship_tracking_mult = 2
+		ship_accuracy_mult = 2
+		ship_weapon_range_mult = 2
+		intel_encryption_add = 20
+		intel_decryption_add = 20
+		fleet_mia_time_mult = -1
+		ship_jumpdrive_cooldown_mult = -0.5
+		ship_winddown_mult = 0.3
+		ship_windup_mult = 0.3
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 40000
+			sr_dark_matter = 5000
+			acot_sr_dark_energy = 5000
+		}
+		upkeep = {
+		energy = 2000
+		acot_sr_stellarite = 500
+		}
+		produces = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+################################## SPHERE
+acot_th_precursor_dyson_sphere_portal = {
+	entity = "precursor_dark_obelisk_construction_portal_entity"
+	construction_entity = "precursor_dark_obelisk_construction_portal_entity"
+	portrait = "GFX_acot_precursor_sphere_background"
+
+	prerequisites = {
+		tech_th_precursor_dyson_sphere
+	}
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -7 y = -7}
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no
+		NOT = { has_global_flag = vanilla_dyson_disabled }
+		OR = {
+			has_global_flag = vanilla_dyson_capped_u						# No Cap
+			check_variable = { which = giga_current_vanilla_dyson value < giga_vanilla_dyson_cap }
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_machine_age"
+			OR = {
+				has_machine_age_dlc = no
+				OR = {
+					has_global_flag = vanilla_dyson_swarm_replace_disabled
+					AND = {
+						NOT = { has_global_flag = giga_o_stars_disabled }
+						has_technology = giga_tech_dyson_o_star 
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		hidden_trigger = {
+			exists = starbase
+		}
+		custom_tooltip = { fail_text = "requires_inside_border"			is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"		giga_system_is_surveyed = yes }
+		custom_tooltip = { 
+			fail_text = "requires_no_habitable_planets"	
+			OR = {
+				giga_any_hab_planets = no 
+				from = { is_ai = no } # Players are allowed to be stupid, AI isn't. 
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_no_existing_similar_mega"
+			NOR = { # No stacking with OG precursor designs
+				has_megastructure = acot_precursor_dyson_sphere_portal
+				has_megastructure = acot_precursor_dyson_sphere_stage_one
+				has_megastructure = acot_precursor_dyson_sphere_stage_two
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "requires_not_capped"
+			from = {
+				OR = {
+					has_global_flag = vanilla_dyson_capped_u									# No Cap
+					check_variable = { which = giga_current_vanilla_dyson value < giga_vanilla_dyson_cap }
+				}
+			}
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = { fail_text = "requires_no_existing_megastructure"		planet_has_no_megastructure = yes }
+			custom_tooltip = { 
+				fail_text = "must_build_around_star"					
+				OR = {
+					is_star = yes
+					giga_black_hole = yes
+				}
+			}
+			custom_tooltip = { fail_text = "requires_no_anomaly"					has_anomaly = no }
+			custom_tooltip = { fail_text = "requires_further_stars" 				NOR = { AND = { giga_is_close_pair_star = yes is_primary_star = no } giga_is_close_pair_primary = yes } }
+			custom_tooltip = {
+				fail_text = "requires_standard_planet_class_o_star"
+				OR = {
+					giga_is_standard_star = yes
+					AND = {
+						giga_is_o_star_for_megas = yes
+						from = { has_technology = giga_tech_dyson_o_star }
+					}
+				}
+			}
+		}
+	}
+
+	country_modifier = {
+	}
+
+	construction_blocks_and_blocked_by = self_type
+
+	build_time = 1
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 0 # Sanity
+		modifier = {
+			factor = 0
+			NOR = {
+				starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+				any_system_planet = {
+					exists = owner
+					is_owned_by = from 
+				}
+			}
+		}	
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				NOT = { 
+					is_owned_by = from 
+				}
+			}
+		}		
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+		fromfrom = {
+			upgrade_megastructure_to = acot_precursor_dyson_sphere_stage_one
+		}
+	}
+}
+
+acot_th_precursor_dyson_sphere_1 = {
+	entity = "acot_precursor_dyson_sphere_stage_1_entity"
+	construction_entity = "acot_precursor_dyson_sphere_stage_1_entity"
+	portrait = "GFX_acot_precursor_sphere_background"
+
+	prerequisites = {
+		tech_th_precursor_dyson_sphere
+		
+	}
+
+	upgrade_from = {
+		acot_precursor_dyson_sphere_portal
+	}
+
+	#place_entity_on_planet_plane = no
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+	}
+
+	build_time = 1799
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		produces = {
+			energy = 5000
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					OR = {
+						is_star_class = sc_black_hole
+						is_star_class = sc_acot_void_star
+					}				
+				}
+			}
+			sr_dark_matter = 500
+			acot_sr_dark_energy = 500
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_dyson_sphere_2 = {
+	entity = "acot_precursor_dyson_sphere_stage_2_entity"
+	construction_entity = "acot_precursor_dyson_sphere_stage_2_entity"
+	portrait = "GFX_acot_precursor_sphere_background"
+
+	prerequisites = {
+		tech_th_precursor_dyson_sphere
+	}
+
+	upgrade_from = {
+		acot_th_precursor_dyson_sphere_1
+		dyson_sphere_5
+		dyson_sphere_5_a_star
+		dyson_sphere_5_b_star
+		dyson_sphere_5_f_star
+		dyson_sphere_5_g_star
+		dyson_sphere_5_k_star
+		dyson_sphere_5_m_star
+		dyson_sphere_5_m_giant_star
+	}
+
+	#place_entity_on_planet_plane = no
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		produces = {
+			energy = 10000
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					OR = {
+						is_star_class = sc_black_hole
+						is_star_class = sc_acot_void_star
+					}				
+				}
+			}
+			sr_dark_matter = 500
+			acot_sr_dark_energy = 500
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_dyson_sphere_alpha = {
+	entity = "acot_precursor_dyson_sphere_stage_2_entity"
+	construction_entity = "acot_precursor_dyson_sphere_stage_2_entity"
+	portrait = "GFX_acot_precursor_sphere_background"
+
+	prerequisites = {
+		tech_precursor_enigmalith_ae
+		tech_th_precursor_dyson_sphere
+	}
+
+	upgrade_from = {
+		acot_th_precursor_dyson_sphere_2
+	}
+
+	#place_entity_on_planet_plane = no
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		produces = {
+			energy = 20000
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					OR = {
+						is_star_class = sc_black_hole
+						is_star_class = sc_acot_void_star
+					}				
+				}
+			}
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_dyson_sphere_phanon = {
+	entity = "acot_precursor_dyson_sphere_stage_2_entity"
+	construction_entity = "acot_precursor_dyson_sphere_stage_2_entity"
+	portrait = "GFX_acot_precursor_sphere_background"
+
+	prerequisites = {
+		tech_precursor_enigmalith_re
+		tech_th_precursor_dyson_sphere
+		tech_precursor_phanon_design
+	}
+
+	upgrade_from = {
+		acot_th_precursor_dyson_sphere_alpha
+	}
+
+	#place_entity_on_planet_plane = no
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		produces = {
+			energy = 40000
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					OR = {
+						is_star_class = sc_black_hole
+						is_star_class = sc_acot_void_star
+					}				
+				}
+			}
+			sr_dark_matter = 1000
+			acot_sr_dark_energy = 1000
+			aot_sr_runic_energy = 10000
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_dyson_sphere_sigma = {
+	entity = "acot_precursor_dyson_sphere_stage_2_entity"
+	construction_entity = "acot_precursor_dyson_sphere_stage_2_entity"
+	portrait = "GFX_acot_precursor_sphere_background"
+
+	prerequisites = {
+		tech_precursor_enigmalith_se
+		tech_th_precursor_dyson_sphere
+		tech_dark_matter_power_core_se
+	}
+
+	upgrade_from = {
+		acot_th_precursor_dyson_sphere_phanon
+	}
+
+	#place_entity_on_planet_plane = no
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	country_modifier = {
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		produces = {
+			energy = 100000
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					OR = {
+						is_star_class = sc_black_hole
+						is_star_class = sc_acot_void_star
+					}				
+				}
+			}
+			aot_sr_runic_energy = 10000
+			acot_sr_stellarite = 10000
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+################################## SHIPYARD
+acot_th_precursor_mega_shipyard_portal = {
+	entity = "precursor_dark_obelisk_construction_portal_entity"
+	construction_entity = "precursor_dark_obelisk_construction_portal_entity"
+	portrait = "GFX_acot_precursor_shipyard_background"
+
+	prerequisites = {
+		tech_precursor_mega_shipyard
+	}
+
+
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -20 y = -20 }
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	possible = {
+		hidden_trigger = {
+			exists = starbase
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_similar_mega"
+			NOR = {
+				has_megastructure = acot_precursor_mega_shipyard_portal
+				has_megastructure = acot_precursor_mega_shipyard
+			}
+		}	
+		custom_tooltip = { fail_text = "requires_inside_border"			is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"		giga_system_is_surveyed = yes }
+		custom_tooltip = { fail_text = "requires_no_binary_trinary"		giga_is_bitrinary = no }
+		custom_tooltip = {
+			fail_text = "requires_not_capped"
+			from = {
+				OR = {
+					check_variable = { which = giga_vanilla_shipyard_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_shipyard value < giga_vanilla_shipyard_cap }
+				}
+			}
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = { fail_text = "must_build_around_star"					is_star = yes }
+			custom_tooltip = { fail_text = "requires_no_existing_megastructure"		planet_has_no_megastructure = yes }
+			custom_tooltip = { fail_text = "requires_no_anomaly"					has_anomaly = no }
+			custom_tooltip = { fail_text = "requires_standard_planet_class"			giga_is_standard_star = yes }
+		}
+	}
+	
+	country_modifier = {
+	}
+
+	construction_blocks_and_blocked_by = self_type
+
+	build_time = 1
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+		}
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOR = {
+				starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+				any_system_planet = {
+					exists = owner
+					is_owned_by = from 
+				}
+			}
+		}	
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				NOT = { 
+					is_owned_by = from 
+				}
+			}
+		}		
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+		fromfrom = {
+			upgrade_megastructure_to = acot_precursor_mega_shipyard
+		}
+	}
+}
+
+acot_th_precursor_mega_shipyard = {
+	entity = "acot_precursor_shipyard_stage_3_section_entity"
+	construction_entity = "acot_precursor_shipyard_stage_3_section_entity"
+	portrait = "GFX_acot_precursor_shipyard_background"
+
+	prerequisites = {
+		tech_precursor_mega_shipyard
+	}
+
+	upgrade_from = {
+		acot_th_precursor_mega_shipyard_portal
+		mega_shipyard_3
+	}
+
+	#place_entity_on_planet_plane = no
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	ship_modifier = {
+		ship_starting_experience_add = 1000
+	}
+
+	station_modifier = {
+		starbase_shipyard_capacity_add = 40
+	}
+
+	country_modifier = {
+		starbase_shipyard_build_speed_mult = 1.5
+		starbase_shipyard_build_time_mult = -0.9
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 2000
+			acot_sr_dark_energy = 2000
+		}
+		upkeep = {
+			alloys = 50
+			sr_dark_matter = 40
+			acot_sr_dark_energy = 40
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		set_ship_construction_type = starbase_shipyard
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_mega_shipyard_alpha = {
+	entity = "acot_precursor_shipyard_stage_3_section_entity"
+	construction_entity = "acot_precursor_shipyard_stage_3_section_entity"
+	portrait = "GFX_acot_precursor_shipyard_background"
+
+	prerequisites = {
+		tech_precursor_mega_shipyard
+		tech_precursor_citadel
+	}
+
+	upgrade_from = {
+		acot_th_precursor_mega_shipyard
+	}
+
+	#place_entity_on_planet_plane = no
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	ship_modifier = {
+		ship_starting_experience_add = 2500
+	}
+
+	station_modifier = {
+		starbase_shipyard_capacity_add = 100
+	}
+
+	country_modifier = {
+		starbase_shipyard_build_speed_mult = 2
+		starbase_shipyard_build_time_mult = -0.1
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 4000
+			acot_sr_dark_energy = 4000
+		}
+		upkeep = {
+			alloys = 100
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		fromfrom = { set_ship_construction_type = starbase_shipyard }
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_mega_shipyard_phanon = {
+	entity = "acot_precursor_shipyard_stage_3_section_entity"
+	construction_entity = "acot_precursor_shipyard_stage_3_section_entity"
+	portrait = "GFX_acot_precursor_shipyard_background"
+
+	prerequisites = {
+		tech_precursor_mega_shipyard
+		tech_precursor_citadel
+		tech_precursor_phanon_design
+	}
+
+	upgrade_from = {
+		acot_th_precursor_mega_shipyard
+	}
+
+	#place_entity_on_planet_plane = no
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	ship_modifier = {
+		ship_starting_experience_add = 2500
+	}
+
+	station_modifier = {
+		starbase_shipyard_capacity_add = 100
+	}
+
+	country_modifier = {
+		starbase_shipyard_build_speed_mult = 2
+		starbase_shipyard_build_time_mult = -0.1
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 4000
+			acot_sr_dark_energy = 4000
+		}
+		upkeep = {
+			alloys = 100
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		fromfrom = { set_ship_construction_type = starbase_shipyard }
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}
+
+acot_th_precursor_mega_shipyard_sigma = {
+	entity = "acot_precursor_shipyard_stage_3_section_entity"
+	construction_entity = "acot_precursor_shipyard_stage_3_section_entity"
+	portrait = "GFX_acot_precursor_shipyard_background"
+
+	prerequisites = {
+		tech_precursor_mega_shipyard
+		tech_precursor_citadel
+	}
+
+	upgrade_from = {
+		acot_th_precursor_mega_shipyard_phanon
+	}
+
+	#place_entity_on_planet_plane = no
+
+	# Used from script only
+	# upgrade_desc = hide
+	potential = {
+		is_fallen_empire = no	
+	}
+	
+	ship_modifier = {
+		ship_starting_experience_add = 2500
+	}
+
+	station_modifier = {
+		starbase_shipyard_capacity_add = 100
+	}
+
+	country_modifier = {
+		starbase_shipyard_build_speed_mult = 2
+		starbase_shipyard_build_time_mult = -0.1
+	}
+
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			sr_dark_matter = 4000
+			acot_sr_dark_energy = 4000
+		}
+		upkeep = {
+			alloys = 100
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+	}
+
+	ai_weight = {
+		factor = 10	
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		fromfrom = { set_ship_construction_type = starbase_shipyard }
+		create_message = {
+			type = ACOT_MEGA_BUILT
+			localization = message_acot_mega_enigmalith_built
+			days = 20
+			target = fromfrom
+		}
+	}
+}

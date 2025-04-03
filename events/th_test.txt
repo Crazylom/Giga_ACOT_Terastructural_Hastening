@@ -1,0 +1,2 @@
+namespace = th_test
+

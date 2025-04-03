@@ -1,0 +1,120 @@
+giga_tech_amb_supertensiles_acot_delta = {
+	cost = @acot_tier6cost2
+	area = physics
+	tier = 6
+	category = { field_manipulation }
+	prerequisites = { giga_tech_amb_supertensiles tech_dark_matter_power_core_dm }
+	weight = @tier5weight1
+
+	potential = { 
+		has_acot = yes
+		has_global_flag = @giga_amb_flag
+
+		NOT = { has_global_flag = acot_building_forbidden }
+	}
+
+	modifier = {
+		country_base_giga_sr_amb_megaconstruction_produces_add = 32
+		megastructure_build_speed_mult = 0.2
+	}
+
+	weight_modifier = {
+		modifier = { factor = 0 not = { has_global_flag = @giga_amb_flag }}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier_medium
+	}
+}
+
+giga_tech_amb_supertensiles_acot_alpha = {
+	cost = @acot_tier7cost2
+	area = physics
+	tier = 7
+	category = { field_manipulation }
+	prerequisites = { giga_tech_amb_supertensiles_acot_delta tech_dark_matter_power_core_ae }
+	weight = @tier5weight1
+
+	potential = { 
+		has_acot = yes
+		has_global_flag = @giga_amb_flag
+
+		NOT = { has_global_flag = acot_building_forbidden }
+		has_technology = tech_dark_matter_power_core_ae
+	}
+	
+	modifier = {
+		country_base_giga_sr_amb_megaconstruction_produces_add = 64
+		megastructure_build_speed_mult = 0.4
+	}
+	
+	weight_modifier = {
+		modifier = { factor = 0 not = { has_global_flag = @giga_amb_flag }}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier_medium
+	}
+}
+
+giga_tech_amb_supertensiles_acot_phanon = {
+	cost = @acot_tier8cost2
+	area = physics
+	tier = 8
+	category = { field_manipulation }
+	prerequisites = { giga_tech_amb_supertensiles_acot_alpha tech_civil_phanon_application }
+	weight = @tier5weight1
+
+	potential = { 
+		has_acot = yes
+		has_global_flag = has_aot_mod
+		has_global_flag = @giga_amb_flag
+
+		NOT = { has_global_flag = aot_phanon_content_OFF }
+		has_technology = tech_civil_phanon_application
+	}
+
+	modifier = {
+		country_base_giga_sr_amb_megaconstruction_produces_add = 128
+		megastructure_build_speed_mult = 1
+	}
+
+	weight_modifier = {
+		modifier = { factor = 0 not = { has_global_flag = @giga_amb_flag }}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier_medium 
+	}
+}
+
+giga_tech_amb_supertensiles_acot_sigma = {
+	cost = @acot_tier9cost2
+	area = physics
+	tier = 9
+	category = { field_manipulation }
+	prerequisites = { giga_tech_amb_supertensiles_acot_phanon tech_dark_matter_power_core_se }
+	weight = @tier5weight1
+
+	potential = { 
+		has_acot = yes
+		has_global_flag = has_aot_mod
+		has_global_flag = @giga_amb_flag
+
+		NOT = { has_global_flag = acot_building_forbidden }
+		has_technology = tech_dark_matter_power_core_se
+	}
+
+	modifier = {
+		country_base_giga_sr_amb_megaconstruction_produces_add = 256
+		megastructure_build_speed_mult = 2
+	}
+
+	weight_modifier = {
+		modifier = { factor = 0 not = { has_global_flag = @giga_amb_flag }}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier_medium 
+	}
+}

@@ -1,0 +1,48 @@
+# see common/inline_scripts/jobs/ for the referenced scripts
+# see common/scripted_variables/giga_amb_variables.txt for values used in these definitions
+
+# jobs
+
+inline_script = {
+	script = "jobs/th_jobs_scripts"
+	tier = "delta"
+
+	resource1 = "sr_dark_matter"
+	resource2 = "energy"
+
+	icon_big = "th_delta_seer"
+	icon_big_drone = "th_delta_drone"
+}
+
+inline_script = {
+	script = "jobs/th_jobs_scripts"
+	tier = "alpha"
+
+	resource1 = "sr_dark_matter"
+	resource2 = "acot_sr_dark_energy"
+
+	icon_big = "th_alpha_seer"
+	icon_big_drone = "th_alpha_drone"
+}
+
+inline_script = {
+	script = "jobs/th_jobs_scripts"
+	tier = "phanon"
+
+	resource1 = "aot_sr_runic_power"
+	resource2 = "energy"
+
+	icon_big = "th_phanon_seer"
+	icon_big_drone = "th_phanon_drone"
+}
+
+inline_script = {
+	script = "jobs/th_jobs_scripts"
+	tier = "sigma"
+
+	resource1 = "acot_sr_stellarite"
+	resource2 = "energy"
+
+	icon_big = "th_phanon_seer"
+	icon_big_drone = "th_phanon_drone"
+}

@@ -1,0 +1,78 @@
+##########################################################################################################
+# Applying mod's own values to base gigas acot jobs...truly loathsome
+##########################################################################################################
+
+# delta
+# 2x output, 2x upkeep
+
+# megaengineering director
+@th_overseer_delta_output = 10
+@th_overseer_delta_alloys_upkeep = 20
+@th_overseer_delta_unity_upkeep = 10
+@th_overseer_delta_extra = 5 # extra ConsumerGoods upkeep
+@th_overseer_delta_gestalt_extra = 10 # extra food/energy upkeep for gestalts
+
+@th_overseer_delta_resource1_upkeep = 10
+@th_overseer_delta_resource2_upkeep = 2 # not used
+
+# 20% more output, 20% more upkeep, but half is sentient metal
+@th_overseer_delta_output_edict = 2
+@th_overseer_delta_alloys_edict = 10
+@th_overseer_delta_sentient_metal_edict = 10
+
+##########################################################################################################
+# alpha
+# 4x output, 4x upkeep
+
+# megaengineering director
+@th_overseer_alpha_output = 20
+@th_overseer_alpha_alloys_upkeep = 40
+@th_overseer_alpha_unity_upkeep = 20
+@th_overseer_alpha_extra = 10 # extra CG upkeep
+@th_overseer_alpha_gestalt_extra = 20 # extra food/energy upkeep for gestalts
+
+@th_overseer_alpha_resource1_upkeep = 20
+@th_overseer_alpha_resource2_upkeep = 20
+
+# 30% more output, 30% more upkeep, but half is sentient metal
+@th_overseer_alpha_output_edict = 6
+@th_overseer_alpha_alloys_edict = -20
+@th_overseer_alpha_sentient_metal_edict = 20
+
+##########################################################################################################
+# phanon
+# 10x output, 10x upkeep
+
+# megaengineering director
+@th_overseer_phanon_output = 50
+@th_overseer_phanon_alloys_upkeep = 200
+@th_overseer_phanon_unity_upkeep = 200
+@th_overseer_phanon_extra = 30 # extra CG upkeep
+@th_overseer_phanon_gestalt_extra = 60 # extra food/energy upkeep for gestalts
+
+@th_overseer_phanon_resource1_upkeep = 400
+@th_overseer_phanon_resource2_upkeep = 400
+
+# 40% more output, 40% more upkeep, but half is sentient metal
+@th_overseer_phanon_output_edict = 20
+@th_overseer_phanon_alloys_edict = -50
+@th_overseer_phanon_sentient_metal_edict = 50
+
+##########################################################################################################
+# sigma
+# 20x output, 20x upkeep
+
+# megaengineering director
+@th_overseer_sigma_output = 100
+@th_overseer_sigma_alloys_upkeep = 500
+@th_overseer_sigma_unity_upkeep = 400
+@th_overseer_sigma_extra = 50 # extra CG upkeep
+@th_overseer_sigma_gestalt_extra = 100 # extra food/energy upkeep for gestalts
+
+@th_overseer_sigma_resource1_upkeep = 1000
+@th_overseer_sigma_resource2_upkeep = 1000
+
+# 50% more output, 50% more upkeep, but half is sentient metal
+@th_overseer_sigma_output_edict = 40
+@th_overseer_sigma_alloys_edict = -80
+@th_overseer_sigma_sentient_metal_edict = 80

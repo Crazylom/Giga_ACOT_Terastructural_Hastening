@@ -1,0 +1,116 @@
+building_giga_megaworkshop = {
+	base_buildtime = @b2_time
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	prerequisites = {
+		giga_tech_amb_supertensiles
+	}
+
+	potential = {
+		nor = { 
+			has_modifier = resort_colony
+			has_modifier = slave_colony 
+			has_modifier = gestation_colony
+		}
+		has_global_flag = @giga_amb_flag
+	}
+
+	country_modifier = {
+		country_resource_max_giga_sr_amb_megaconstruction_add = 3000
+		megastructure_build_speed_mult = 0.10
+		planet_decision_enact_speed_mult = 0.05
+		planet_building_build_speed_mult = 0.05
+		planet_clear_blocker_speed_mult = 0.05
+		starbase_building_build_speed_mult = 0.05
+		starbase_module_build_speed_mult = 0.05
+		starbase_upgrade_speed_mult = 0.05
+		planet_clear_blocker_speed_mult = 0.05
+		planet_colony_development_speed_mult = 0.05
+		terraform_speed_mult = 0.05
+		megastructures_produces_mult = 0.02
+		megastructures_cost_mult = -0.01
+		megastructures_upkeep_mult = -0.01
+		megastructure_build_speed_add = 0.05
+		}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = gestation_colony 
+			NOT = { has_global_flag = @giga_amb_flag }
+		}
+	}
+	upgrades = {
+		building_giga_megaworkshop_acot_delta
+	}
+}
+
+building_giga_megaworkshop_hub = {
+	base_buildtime = @b4_time
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	prerequisites = {
+		giga_tech_amb_supertensiles
+	}
+
+	potential = {
+		nor = { 
+			has_modifier = resort_colony
+			has_modifier = slave_colony 
+			has_modifier = gestation_colony
+		}
+		has_global_flag = @giga_amb_flag
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = gestation_colony
+			NOT = { has_global_flag = @giga_amb_flag }
+		}
+	}
+
+	# loathsome
+	upgrades = {
+		building_giga_megaworkshop_hub_acot_delta
+	}
+
+	country_modifier = {
+		megastructure_build_speed_mult = 0.02
+	}
+
+	inline_script = {
+		script = planet/supertensiles/giga_megaengineering_overseer_job_swap
+		jobs = 2
+	}
+}
